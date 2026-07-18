@@ -15,7 +15,7 @@
 | 7 | merge conflicts | Done | conflict-demo resolved |
 | 8 | remote add | Done | origin connected |
 | 9 | push | Done | pushed to GitHub |
-| 10 | pull | Pending | |
+| 10 | pull | Done | Simulated remote edit + git pull fast-forward |
 | 11–16 | … | Pending | |
 
 ## Skills gained
