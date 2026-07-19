@@ -2,7 +2,7 @@
 
 **Repo:** agentic-ai-developer  
 **Track:** Git (16 days)  
-**Last updated:** 2026-07-18
+**Last updated:** 2026-07-19
 
 | Day | Topic | Status | Notes |
 |-----|-------|--------|-------|
@@ -17,8 +17,11 @@
 | 9 | push | Done | pushed to GitHub |
 | 10 | pull | Done | Simulated remote edit + git pull fast-forward |
 | 11 | clone | Done | Cloned agentic-ai-developer to agentic-ai-developer-clone |
+| 12 | undo (reset & revert) | Done | unstage, soft reset, revert |
+| 13–16 | … | Pending | |
 
 ## Skills gained
 - git init, add, commit, status, log, diff
 - .gitignore, branch, merge, conflict resolution
-- remote, push
+- remote, push, pull, clone
+- reset, revert
