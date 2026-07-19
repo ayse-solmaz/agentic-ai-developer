@@ -1,0 +1,13 @@
+# Day 3 — Waterfall, Agile, and Iterative Models
+
+## Waterfall sketch
+...
+
+## Agile sketch
+...
+
+## Compare for a project
+...
+
+## Hybrid reality
+...
