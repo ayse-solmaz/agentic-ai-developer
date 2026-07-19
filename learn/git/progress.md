@@ -23,7 +23,9 @@
 | 13 | interactive rebase | Done | squashed 3 wip commits into 1 | [day-13-rebase.md](./day-13-rebase.md) |
 | 14 | cherry-pick | Done | picked hotfix onto main | [day-14-cherry-pick.md](./day-14-cherry-pick.md) |
 | 15 | stash | Done | stash -u, switch branch, stash pop | [day-15-stash.md](./day-15-stash.md) |
-| 16 | tagging | Pending | | |
+| 16 | tagging | Done | annotated tag v1.0.0-git-track pushed | [day-16-tagging.md](./day-16-tagging.md) |
+
+**Git track complete — 16/16 days**
 
 ## Skills gained
 
@@ -31,7 +33,7 @@
 - **Repo hygiene:** .gitignore
 - **Branching:** branch, switch, merge, conflict resolution
 - **Remote:** remote, push, pull, clone
-- **History:** reset, revert, rebase, cherry-pick, stash
+- **History:** reset, revert, rebase, cherry-pick, stash, tag
 
 ## Practice notes
 

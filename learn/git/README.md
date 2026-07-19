@@ -23,6 +23,7 @@ See **[progress.md](./progress.md)** for the full day-by-day log.
 | 13 | rebase | [day-13-rebase.md](./day-13-rebase.md) |
 | 14 | cherry-pick | [day-14-cherry-pick.md](./day-14-cherry-pick.md) |
 | 15 | stash | [day-15-stash.md](./day-15-stash.md) |
+| 16 | tagging | [day-16-tagging.md](./day-16-tagging.md) |
 
-**Current:** Day 15 complete — next up Day 16 (tagging).
+**Git track complete — 16/16.** Next: SDLC Day 1 in `learn/sdlc/`.
 Day 10: Simulated remote change for git pull practice.
