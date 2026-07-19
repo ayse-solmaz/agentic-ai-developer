@@ -18,7 +18,7 @@
 | 10 | pull | Done | Simulated remote edit + git pull fast-forward |
 | 11 | clone | Done | Cloned agentic-ai-developer to agentic-ai-developer-clone |
 | 12 | undo (reset & revert) | Done | unstage, soft reset, revert |
-| 13–16 | … | Pending | |
+| 13 | interactive rebase | Done | squashed 3 wip commits into 1 |
 
 ## Skills gained
 - git init, add, commit, status, log, diff
