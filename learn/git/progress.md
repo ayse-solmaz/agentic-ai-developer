@@ -16,7 +16,7 @@
 | 8 | remote add | Done | origin connected |
 | 9 | push | Done | pushed to GitHub |
 | 10 | pull | Done | Simulated remote edit + git pull fast-forward |
-| 11–16 | … | Pending | |
+| 11 | clone | Done | Cloned agentic-ai-developer to agentic-ai-developer-clone |
 
 ## Skills gained
 - git init, add, commit, status, log, diff
