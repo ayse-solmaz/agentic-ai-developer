@@ -6,5 +6,6 @@
 
 | Day | Topic | Status | Doc |
 |-----|-------|--------|-----|
-| 1 | SDLC fundamentals | In progress | day-01-fundamentals.md |
-| 2–16 | … | Pending | |
+| 1 | SDLC fundamentals | Done | [day-01-fundamentals.md](./day-01-fundamentals.md) |
+| 2 | Classic phases end to end | Done | [day-02-phases-end-to-end.md](./day-02-phases-end-to-end.md) |
+| 3–16 | … | Pending | |
