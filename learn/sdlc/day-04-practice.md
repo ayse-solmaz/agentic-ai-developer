@@ -11,7 +11,7 @@
 2. The model needs repeated testing and adjustment.
 3. No regulation or fixed contract forces a strict process.
 4. Early feedback from testers matters.
-5. The project is built in small parts (tempo, lyrics, prediction score).
+5. The project is built in small parts (tempo, lyrics, prediction score). 
 
 ## Phase checklist
 
