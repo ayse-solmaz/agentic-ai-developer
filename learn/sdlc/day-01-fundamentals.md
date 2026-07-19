@@ -8,13 +8,13 @@
 Deliverable: requirements document / user stories
 2. **Design** — The requirements are turned into an architecture and technical plan that explains how the system will be built.
 Deliverable: architecture diagram / technical design doc
-3. **Implementation** — Developers write the actual code based on the design, and the planned features come to life.
+3.**Implementation** — Developers write the actual code based on the design, and the planned features come to life.
 Deliverable: working source code
-4. **Testing** — The code is checked against the requirements to make sure everything works correctly and without errors.
+4.**Testing** — The code is checked against the requirements to make sure everything works correctly and without errors.
 Deliverable: test report / bug list
-5. **Deployment** — The tested software is released and made available to real users in the production environment.
+5.**Deployment** — The tested software is released and made available to real users in the production environment.
 Deliverable: live version in production
-6. **Maintenance** — The live software is monitored after release, and any issues found are fixed or improved over time.
+6.**Maintenance** — The live software is monitored after release, and any issues found are fixed or improved over time.
 Deliverable: update/patch records
 
 ## App mapping
@@ -25,6 +25,6 @@ Deliverable: update/patch records
 
 ## 3 risks of skipping phases
 
-1. **Skip requirements** — If requirements are skipped, the team builds the wrong product because they never confirmed what users actually need, and both the company and the users lose time and money.
-2. **Skip testing** — If testing is skipped, bugs and errors reach production instead of being caught early, and users end up losing trust in the app.
-3. **Skip maintenance** — If maintenance is skipped, small issues pile up over time into security vulnerabilities and technical debt, making the software harder and more expensive to fix later.
+1.**Skip requirements** — If requirements are skipped, the team builds the wrong product because they never confirmed what users actually need, and both the company and the users lose time and money.
+2.**Skip testing** — If testing is skipped, bugs and errors reach production instead of being caught early, and users end up losing trust in the app.
+3.**Skip maintenance** — If maintenance is skipped, small issues pile up over time into security vulnerabilities and technical debt, making the software harder and more expensive to fix later.
