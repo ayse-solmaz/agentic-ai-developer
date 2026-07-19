@@ -19,9 +19,11 @@
 | 11 | clone | Done | Cloned agentic-ai-developer to agentic-ai-developer-clone |
 | 12 | undo (reset & revert) | Done | unstage, soft reset, revert |
 | 13 | interactive rebase | Done | squashed 3 wip commits into 1 |
+| 14 | cherry-pick | Done | picked hotfix commit onto main |
+| 15–16 | … | Pending | |
 
 ## Skills gained
 - git init, add, commit, status, log, diff
 - .gitignore, branch, merge, conflict resolution
 - remote, push, pull, clone
-- reset, revert
+- reset, revert, rebase, cherry-pick
