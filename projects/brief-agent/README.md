@@ -7,7 +7,8 @@ A document summarization tool for students who need to extract key points from l
 | Phase | Status | Doc |
 |-------|--------|-----|
 | SDLC S1 — Discovery | Done | [docs/sdlc/01-discovery.md](./docs/sdlc/01-discovery.md) |
-| SDLC S2 — User story + AC | In progress | `docs/sdlc/02-user-story.md` |
+| SDLC S2 — User story + AC | Done | [docs/sdlc/02-user-story.md](./docs/sdlc/02-user-story.md) |
+| SDLC S3 — Design | Done | [docs/sdlc/03-design.md](./docs/sdlc/03-design.md) |
 
 ## MVP (v0.1.0)
 
