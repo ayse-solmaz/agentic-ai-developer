@@ -15,6 +15,7 @@
 | 6 | Encapsulation — hiding state | Done | [day-06.md](./day-06.md) | [day-06-bank.py](./practice/day-06-bank.py) |
 | 7 | Invariants & validation | Done | [day-07.md](./day-07.md) | [day-07-bank.py](./practice/day-07-bank.py) |
 | 8 | Abstraction & intent | Done | [day-08.md](./day-08.md) | [day-08-bank.py](./practice/day-08-bank.py) |
+| 9 | Mutable vs immutable | Done | [day-09.md](./day-09.md) | [day-09-bank.py](./practice/day-09-bank.py) |
 
 ## Study
 
@@ -25,6 +26,6 @@
 | Phase | Days | Status |
 |-------|------|--------|
 | OOP Fundamentals | 1–5 | Done |
-| Encapsulation & Abstraction | 6–10 | In progress (Day 8 done) |
+| Encapsulation & Abstraction | 6–10 | In progress (Day 9 done) |
 | Inheritance & Polymorphism | 11–15 | Pending |
 | SOLID, Patterns & Practice | 16–20 | Pending |
