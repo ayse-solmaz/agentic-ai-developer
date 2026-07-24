@@ -4,8 +4,8 @@
 
 ## Learned
 
-- **Mutable:** same object changes (`id` stays the same) — `MutableMoney.add`
-- **Immutable:** returns a new instance — `im2 = im.add(50)`
-- **Entity** (e.g. `BankAccount`) → prefer mutable
-- **Value object** (e.g. `Money`) → prefer immutable
-- **Trade-off:** mutable is easier to use; immutable is safer when shared (don't forget to assign the result)
+- **Mutable:** aynı nesne değişir (`id` aynı) — `MutableMoney.add`
+- **Immutable:** yeni nesne döner — `im2 = im.add(50)`
+- **Entity** (BankAccount) → mutable
+- **Value object** (Money) → immutable
+- **Trade-off:** mutable kolay; immutable paylaşımda daha güvenli

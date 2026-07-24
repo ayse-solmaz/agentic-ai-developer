@@ -1,7 +1,7 @@
 # OOP Progress — MasterFabric Academy
 
 **Track:** OOP (20 days) · **Language:** Python · **Domain:** Bank  
-**Last updated:** 2026-07-24
+**Last updated:** 2026-07-25
 
 ## Day-by-day log
 
@@ -16,6 +16,7 @@
 | 7 | Invariants & validation | Done | [day-07.md](./day-07.md) | [day-07-bank.py](./practice/day-07-bank.py) |
 | 8 | Abstraction & intent | Done | [day-08.md](./day-08.md) | [day-08-bank.py](./practice/day-08-bank.py) |
 | 9 | Mutable vs immutable | Done | [day-09.md](./day-09.md) | [day-09-bank.py](./practice/day-09-bank.py) |
+| 10 | Encapsulation practice | Done | [day-10.md](./day-10.md) | [day-10-bank.py](./practice/day-10-bank.py) |
 
 ## Study
 
@@ -26,6 +27,6 @@
 | Phase | Days | Status |
 |-------|------|--------|
 | OOP Fundamentals | 1–5 | Done |
-| Encapsulation & Abstraction | 6–10 | In progress (Day 9 done) |
+| Encapsulation & Abstraction | 6–10 | Done |
 | Inheritance & Polymorphism | 11–15 | Pending |
 | SOLID, Patterns & Practice | 16–20 | Pending |
