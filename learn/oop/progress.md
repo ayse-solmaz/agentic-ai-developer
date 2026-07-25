@@ -17,6 +17,7 @@
 | 8 | Abstraction & intent | Done | [day-08.md](./day-08.md) | [day-08-bank.py](./practice/day-08-bank.py) |
 | 9 | Mutable vs immutable | Done | [day-09.md](./day-09.md) | [day-09-bank.py](./practice/day-09-bank.py) |
 | 10 | Encapsulation practice | Done | [day-10.md](./day-10.md) | [day-10-bank.py](./practice/day-10-bank.py) |
+| 11 | Inheritance basics | Done | [day-11.md](./day-11.md) | [day-11-bank.py](./practice/day-11-bank.py) |
 
 ## Study
 
@@ -28,5 +29,5 @@
 |-------|------|--------|
 | OOP Fundamentals | 1–5 | Done |
 | Encapsulation & Abstraction | 6–10 | Done |
-| Inheritance & Polymorphism | 11–15 | Pending |
+| Inheritance & Polymorphism | 11–15 | In progress (Day 11 done) |
 | SOLID, Patterns & Practice | 16–20 | Pending |
