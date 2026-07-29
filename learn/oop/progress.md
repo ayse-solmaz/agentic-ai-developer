@@ -20,6 +20,7 @@
 | 11 | Inheritance basics | Done | [day-11.md](./day-11.md) | [day-11-bank.py](./practice/day-11-bank.py) |
 | 12 | Method overriding | Done | [day-12.md](./day-12.md) | [day-12-bank.py](./practice/day-12-bank.py) |
 | 13 | Interfaces & abstract contracts | Done | [day-13.md](./day-13.md) | [day-13-bank.py](./practice/day-13-bank.py) |
+| 14 | Composition over inheritance | Done | [day-14.md](./day-14.md) | [day-14-bank.py](./practice/day-14-bank.py) |
 
 ## Study
 
@@ -31,5 +32,5 @@
 |-------|------|--------|
 | OOP Fundamentals | 1–5 | Done |
 | Encapsulation & Abstraction | 6–10 | Done |
-| Inheritance & Polymorphism | 11–15 | In progress (Day 13 done) |
+| Inheritance & Polymorphism | 11–15 | In progress (Day 14 done) |
 | SOLID, Patterns & Practice | 16–20 | Pending |
