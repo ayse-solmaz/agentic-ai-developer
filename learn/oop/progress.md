@@ -1,7 +1,7 @@
 # OOP Progress — MasterFabric Academy
 
 **Track:** OOP (20 days) · **Language:** Python · **Domain:** Bank  
-**Last updated:** 2026-07-29
+**Last updated:** 2026-07-30
 
 ## Day-by-day log
 
@@ -21,6 +21,12 @@
 | 12 | Method overriding | Done | [day-12.md](./day-12.md) | [day-12-bank.py](./practice/day-12-bank.py) |
 | 13 | Interfaces & abstract contracts | Done | [day-13.md](./day-13.md) | [day-13-bank.py](./practice/day-13-bank.py) |
 | 14 | Composition over inheritance | Done | [day-14.md](./day-14.md) | [day-14-bank.py](./practice/day-14-bank.py) |
+| 15 | Inheritance practice | Done | [day-15.md](./day-15.md) | [day-15-bank.py](./practice/day-15-bank.py) |
+| 16 | SRP and OCP | Done | [day-16.md](./day-16.md) | [day-16-bank.py](./practice/day-16-bank.py) |
+| 17 | LSP, ISP, and DIP | Done | [day-17.md](./day-17.md) | [day-17-bank.py](./practice/day-17-bank.py) |
+| 18 | Factory and Strategy | Done | [day-18.md](./day-18.md) | [day-18-bank.py](./practice/day-18-bank.py) |
+| 19 | Observer and legacy refactor | Done | [day-19.md](./day-19.md) | [day-19-bank.py](./practice/day-19-bank.py) |
+| 20 | Capstone & review | Done | [day-20.md](./day-20.md) | [day-20-capstone.py](./practice/day-20-capstone.py) |
 
 ## Study
 
@@ -32,5 +38,5 @@
 |-------|------|--------|
 | OOP Fundamentals | 1–5 | Done |
 | Encapsulation & Abstraction | 6–10 | Done |
-| Inheritance & Polymorphism | 11–15 | In progress (Day 14 done) |
-| SOLID, Patterns & Practice | 16–20 | Pending |
+| Inheritance & Polymorphism | 11–15 | Done |
+| SOLID, Patterns & Practice | 16–20 | Done |
