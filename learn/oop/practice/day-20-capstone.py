@@ -21,7 +21,7 @@ class TransactionLog:
     def add(self,message):
         self._entries.append(message)
     def get_entries(self):
-        return list(self._entries) # kopya
+        return list(self._entries) 
 from abc import ABC, abstractmethod
 
 class FeeStrategy(ABC):
@@ -59,7 +59,7 @@ class BankAccount(Payable):
         self._notifier = notifier
         self._fee = fee_strategy
         self._log = TransactionLog()
-        self._email = "user@bank.com"  # basit tut
+        self._email = "user@bank.com" 
 
     def get_balance(self):
         return self._balance
@@ -104,4 +104,4 @@ acc = open_account("savings", "S01", 1000, c, Notifier(), FlatFee())
 acc.deposit(100)
 pay(acc, 50)
 print(acc.get_balance())
-print(acc.get_log_entries())  # getter ekle
+print(acc.get_log_entries()) 
