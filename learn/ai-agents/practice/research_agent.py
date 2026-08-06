@@ -15,7 +15,7 @@ def multiply_numbers(a: float, b: float) -> str:
 
 
 #beyin (llm)
-llm = ChatGoogleGenerativeAI(model="gemini-3.1-flash-lite", temperature=0)
+llm=ChatGoogleGenerativeAI(model="gemini-3.1-flash-lite",temperature=0)
 
 #el (tool) - ücretsiz web araması
 search =DuckDuckGoSearchRun()
