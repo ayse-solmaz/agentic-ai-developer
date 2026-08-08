@@ -61,10 +61,25 @@ def snooze_task(task_id: int):
     print("Görev bulunamadı.")
 def delete_task(task_id: int):
     tasks = load_tasks()
-    new_tasks = [t for t in tasks if t["id"] != task_id]
-    if len(new_tasks) == len(tasks):
+    target = None
+    for t in tasks:
+        if t["id"] == task_id:
+            target = t
+            break
+
+    if not target:
         print("Görev bulunamadı.")
         return
+
+    # HITL — approval workflow
+    print(f"Silinecek: [#{target['id']}] {target['title']}")
+    print("Bu işlem geri alınamaz. Onaylıyor musun? (e/h)")
+    ans = input("> ").strip().lower()
+    if ans not in {"e", "evet", "y", "yes"}:
+        print("İptal edildi. Görev silinmedi.")
+        return
+
+    new_tasks = [t for t in tasks if t["id"] != task_id]
     save_tasks(new_tasks)
     print("Silindi.")
 def remind_today():
