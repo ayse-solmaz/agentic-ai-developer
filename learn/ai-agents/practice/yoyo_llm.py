@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.tools import tool
 from langchain_classic.agents import AgentExecutor, create_tool_calling_agent
+from guardrails import check_input, moderate_output
 
 load_dotenv()
 
@@ -103,11 +104,19 @@ def snooze_task(task_id: int) -> str:
 
 @tool
 def delete_task(task_id: int) -> str:
-    """Görevi siler."""
+    """Görevi siler. Önce insan onayı ister (HITL)."""
     tasks = [t for t in load_tasks() if "_error" not in t]
-    new_tasks = [t for t in tasks if t.get("id") != task_id]
-    if len(new_tasks) == len(tasks):
+    target = next((t for t in tasks if t.get("id") == task_id), None)
+    if not target:
         return f"Görev bulunamadı: #{task_id}"
+
+    print(f"Silinecek: [#{target['id']}] {target['title']}")
+    print("Bu işlem geri alınamaz. Onaylıyor musun? (e/h)")
+    ans = input("> ").strip().lower()
+    if ans not in {"e", "evet", "y", "yes"}:
+        return "İptal edildi. Görev silinmedi."
+
+    new_tasks = [t for t in tasks if t.get("id") != task_id]
     save_tasks(new_tasks)
     return f"Silindi: #{task_id}"
 
@@ -148,7 +157,7 @@ def build_llm(backend: str = "gemini"):
 
     from langchain_google_genai import ChatGoogleGenerativeAI
 
-    return ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0)
+    return ChatGoogleGenerativeAI(model="gemini-3.1-flash-lite", temperature=0)
 
 
 def build_agent(backend: str = "gemini"):
@@ -202,9 +211,15 @@ def main():
             continue
         if user.lower() in {"cik", "çık", "exit", "quit"}:
             break
+
+        blocked = check_input(user)
+        if blocked:
+            print("\nYoyo:", blocked, "\n")
+            continue
+
         try:
             result = executor.invoke({"input": user, "today": today_str()})
-            print("\nYoyo:", result["output"], "\n")
+            print("\nYoyo:", moderate_output(str(result["output"])), "\n")
         except Exception as e:
             print("Hata (resilience):", e)
             print("Klasik CLI için: python yoyo.py\n")
