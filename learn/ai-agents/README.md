@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–15 Done** · Phase 11–15 complete · Current: **Day 16 (Planning / ToT)**
+**Status:** Days **1–18 Done** · Phase 16–20 in progress · Current: **Day 19 (deploy + monitor)**
 
 ## Practice
 
@@ -26,6 +26,9 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 13 | Guardrails | [practice/guardrails.py](./practice/guardrails.py), [day-13.md](./day-13.md) |
 | 14 | Fine-tune dataset (design) | [practice/day-14-dataset.jsonl](./practice/day-14-dataset.jsonl), [day-14.md](./day-14.md) |
 | 15 | Mini RAG over notes | [practice/rag_notes.py](./practice/rag_notes.py), [day-15.md](./day-15.md) |
+| 16 | Tree of Thoughts planner | [practice/tot_planner.py](./practice/tot_planner.py), [day-16.md](./day-16.md) |
+| 17 | Code-aware agent (jail) | [practice/code_agent.py](./practice/code_agent.py), [day-17.md](./day-17.md) |
+| 18 | SQL / text-to-SQL | [practice/sql_agent.py](./practice/sql_agent.py), [day-18.md](./day-18.md) |
 
 ## Phases
 
@@ -34,7 +37,7 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Introduction | 1–5 | Complete |
 | Core capabilities | 6–10 | Complete |
 | Advanced fundamentals | 11–15 | **Complete** |
-| Specialized agents | 16–20 | Next |
+| Specialized agents | 16–20 | In progress (Day 18 done) |
 
 ## Run practice
 
