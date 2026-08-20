@@ -7,7 +7,6 @@ Yoyo win: list/remind = local (0 LLM). FAQ = memoize. ToT/plan = expensive, rare
 
 from __future__ import annotations
 
-import hashlib
 import time
 import uuid
 from datetime import datetime, timezone
@@ -15,8 +14,9 @@ from datetime import datetime, timezone
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-from guardrails import _fold, check_input, moderate_output
+from guardrails import check_input, moderate_output
 from monitor_agent import as_text, write_trace
+from yoyo_qa import cache_key, est_tokens, route
 
 load_dotenv()
 
@@ -28,24 +28,6 @@ CACHE_TTL_SEC = 3600
 
 _cache: dict[str, tuple[float, str]] = {}
 _session_usd = 0.0
-
-
-def est_tokens(text: str) -> int:
-    """Rough: ~4 chars per token. Good enough to compare routes."""
-    return max(1, (len(text) + 3) // 4)
-
-
-def cache_key(question: str) -> str:
-    return hashlib.sha256(_fold(question).encode("utf-8")).hexdigest()[:16]
-
-
-def route(question: str) -> str:
-    low = _fold(question)
-    if any(w in low for w in ("planla", "tot", "dengeli gun")):
-        return "expensive"
-    if any(w in low for w in ("ne var", "liste", "hatirlat", "bugun ne")):
-        return "local"
-    return "cheap"
 
 
 def llm_once(question: str) -> str:

@@ -1,0 +1,21 @@
+name: yoyo-qa
+
+on:
+  push:
+    paths:
+      - "learn/ai-agents/practice/**"
+  pull_request:
+    paths:
+      - "learn/ai-agents/practice/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Deterministic agent tests (no API key)
+        working-directory: learn/ai-agents/practice
+        run: python test_yoyo.py

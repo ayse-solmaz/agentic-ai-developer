@@ -4,7 +4,7 @@
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
 **Last updated:** 2026-08-20  
-**Current:** Day 25 (testing / QA) — next up
+**Current:** Day 29 (frameworks) — next up
 
 ## Day-by-day log
 
@@ -34,6 +34,10 @@
 | 22 | Multi-modal (vision) | Done | [day-22.md](./day-22.md) — VLM + media jail | [vision_agent.py](./practice/vision_agent.py) |
 | 23 | Security & privacy | Done | [day-23.md](./day-23.md) — injection, leak, ACL | [security_lab.py](./practice/security_lab.py) |
 | 24 | Cost optimization | Done | [day-24.md](./day-24.md) — route, cache, token estimate | [cost_agent.py](./practice/cost_agent.py) |
+| 25 | Testing / QA | Done | [day-25.md](./day-25.md) — unit + golden + CI | [test_yoyo.py](./practice/test_yoyo.py), [test_cases.json](./practice/test_cases.json) |
+| 26 | Agent communication | Done | [day-26.md](./day-26.md) — mailbox protocol | [mailbox_agents.py](./practice/mailbox_agents.py) |
+| 27 | Domain-specific agents | Done | [day-27.md](./day-27.md) — Yoyo scope + ontology | [domain_agent.py](./practice/domain_agent.py) |
+| 28 | Performance | Done | [day-28.md](./day-28.md) — latency vs parallel wait | [perf_lab.py](./practice/perf_lab.py) |
 
 ## Phase progress
 
@@ -43,9 +47,10 @@
 | Core Agent Capabilities | 6–10 | Tools, memory, multi-agent, Yoyo | Complete |
 | Advanced Fundamentals | 11–15 | Resilience, HITL, safety, RAG | **Complete** |
 | Specialized Agent Development | 16–20 | Planning, code/SQL agents, deploy, capstone | **Complete** |
-| Orchestration & Operations | 21–25 | Workflows, multimodal, security, cost, tests | **In progress** (4/5) |
+| Orchestration & Operations | 21–25 | Workflows, multimodal, security, cost, tests | **Complete** |
+| Domain Agents & Capstone | 26–30 | Protocols, domain agents, perf, frameworks, capstone | **In progress** (3/5) |
 
-## Skills gained (Days 1–24)
+## Skills gained (Days 1–28)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -65,7 +70,11 @@
 - Multi-modal: VLM image describe in a path jail; audio = transcribe then text agent
 - Security: layered injection filter, PII/secret redact, role ACL, no shell
 - Cost: local vs cheap vs expensive routes, FAQ memoization, estimated tokens/USD in traces
+- QA: unittest pyramid, golden classify fixtures, CI without LLM keys
+- Communication: from/to/type/body protocol, FIFO mailbox, leftover letter = HITL
+- Domain: ontology + out-of-scope refuse (no fake medical/legal/finance advice)
+- Performance: measure classify vs model wait; sequential latency sums, parallel ≈ slowest
 
 ## Next
 
-- **Day 25:** Agent testing and quality assurance
+- **Day 29:** Open-source agent frameworks

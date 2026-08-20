@@ -16,6 +16,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 from guardrails import check_input, moderate_output
 from monitor_agent import as_text, now_iso, write_trace
+from yoyo_qa import research_is_grounded
 
 load_dotenv()
 
@@ -61,8 +62,7 @@ def step_research(state: dict) -> None:
 
 def step_validate(state: dict) -> bool:
     """Kod kararı — LLM yok. False = dal: retry veya abort."""
-    research = (state.get("research") or "").strip()
-    ok = bool(research) and "notlarda yok" not in research.lower() and len(research) >= 20
+    ok = research_is_grounded(state.get("research") or "")
     state["steps"].append("validate:" + ("pass" if ok else "fail"))
     return ok
 

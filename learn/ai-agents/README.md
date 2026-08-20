@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–24 Done** · Phase 21–25 in progress · Current: **Day 25**
+**Status:** Days **1–28 Done** · Phase 26–30 in progress · Current: **Day 29**
 
 ## Practice
 
@@ -35,6 +35,10 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 22 | Vision (VLM) | [practice/vision_agent.py](./practice/vision_agent.py), [day-22.md](./day-22.md) |
 | 23 | Security lab | [practice/security_lab.py](./practice/security_lab.py), [day-23.md](./day-23.md) |
 | 24 | Cost (route + cache) | [practice/cost_agent.py](./practice/cost_agent.py), [day-24.md](./day-24.md) |
+| 25 | Testing / QA | [practice/test_yoyo.py](./practice/test_yoyo.py), [practice/test_cases.json](./practice/test_cases.json), [day-25.md](./day-25.md) |
+| 26 | Mailbox / protocol | [practice/mailbox_agents.py](./practice/mailbox_agents.py), [day-26.md](./day-26.md) |
+| 27 | Domain scope | [practice/domain_agent.py](./practice/domain_agent.py), [day-27.md](./day-27.md) |
+| 28 | Perf lab | [practice/perf_lab.py](./practice/perf_lab.py), [day-28.md](./day-28.md) |
 
 ## Phases
 
@@ -44,7 +48,8 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Core capabilities | 6–10 | Complete |
 | Advanced fundamentals | 11–15 | **Complete** |
 | Specialized agents | 16–20 | **Complete** |
-| Orchestration & operations | 21–25 | In progress (Day 24 done) |
+| Orchestration & operations | 21–25 | **Complete** |
+| Domain agents & capstone | 26–30 | In progress (Day 28 done) |
 
 ## Run practice
 
