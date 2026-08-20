@@ -8,16 +8,21 @@ ALLOWED_TASK_FILES={
     PRACTICE_DIR / "tasks_bak.json",
 }
 
-INJECTION_PATTERNS =[
+def _fold(text: str) -> str:
+    """ASCII-fold so 'onceki' and 'önceki' match the same rule."""
+    return text.lower().translate(str.maketrans("ığüşöçİĞÜŞÖÇ", "igusocigusoc"))
+
+
+INJECTION_PATTERNS = [
     r"ignore (all |previous |the)?instructions",
-    r"sistem (prompt|komut).*(yok ?say|unut|göstér|goster)",
-    r"önceki kuralları unut",
+    r"sistem (prompt|komut).*(yok ?say|unut|goster)",
+    r"onceki kurallari unut",
     r"developer mode",
     r"jailbreak",
 ]
 
 MASS_DELETE_PATTERNS = [
-    r"tüm görevleri sil",
+    r"tum gorevleri sil",
     r"hepsini sil",
     r"delete all",
     r"wipe (all )?tasks",
@@ -30,7 +35,7 @@ SECRET_PATTERNS = [
 
 def check_input(text: str) -> str | None:
     """Return block reason, or None if OK."""
-    low = text.lower()
+    low = _fold(text)
     for pat in INJECTION_PATTERNS + MASS_DELETE_PATTERNS:
         if re.search(pat, low, flags=re.IGNORECASE):
             return "Input guardrail: bu istek güvenlik nedeniyle reddedildi."

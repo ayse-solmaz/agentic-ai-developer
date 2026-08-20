@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-08-19  
-**Current:** Day 19 (deploy + monitor) — next up
+**Last updated:** 2026-08-20  
+**Current:** Day 21 (orchestration) — next up
 
 ## Day-by-day log
 
@@ -28,6 +28,8 @@
 | 16 | Advanced planning (ToT) | Done | [day-16.md](./day-16.md) — generator / evaluator / search | [tot_planner.py](./practice/tot_planner.py) |
 | 17 | Code-aware agent | Done | [day-17.md](./day-17.md) — jail, sandbox write, shell RED | [code_agent.py](./practice/code_agent.py) |
 | 18 | SQL / text-to-SQL | Done | [day-18.md](./day-18.md) — schema then SELECT-only | [sql_agent.py](./practice/sql_agent.py) |
+| 19 | Deploy + monitor | Done | [day-19.md](./day-19.md) — request_id, latency, traces.jsonl | [monitor_agent.py](./practice/monitor_agent.py) |
+| 20 | Project: advanced agent | Done | [day-20.md](./day-20.md) — Yoyo Advanced synthesis | [yoyo_advanced.py](./practice/yoyo_advanced.py), [day-20-design.md](./practice/day-20-design.md) |
 
 ## Phase progress
 
@@ -36,9 +38,9 @@
 | Introduction to AI Agents | 1–5 | Fundamentals + first agent | Complete |
 | Core Agent Capabilities | 6–10 | Tools, memory, multi-agent, Yoyo | Complete |
 | Advanced Fundamentals | 11–15 | Resilience, HITL, safety, RAG | **Complete** |
-| Specialized Agent Development | 16–20 | Planning, code/SQL agents, deploy | **In progress** (18/20) |
+| Specialized Agent Development | 16–20 | Planning, code/SQL agents, deploy, capstone | **Complete** |
 
-## Skills gained (Days 1–18)
+## Skills gained (Days 1–20)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -52,7 +54,9 @@
 - Tree of Thoughts planning: generate branches, evaluate, search — plan before execute
 - Code-aware agent: file jail, sandbox-only writes, shell closed by default
 - Text-to-SQL: schema-first, SELECT-only SQLite agent
+- Deploy/monitor: request_id traces, latency, guardrail as a measured failure
+- Capstone synthesis: one Yoyo entrypoint (RAG + ToT + HITL + traces); plan ≠ execute
 
 ## Next
 
-- **Day 19:** Deploying and monitoring AI agents
+- **Day 21:** Agent orchestration and workflow management
