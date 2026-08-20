@@ -32,6 +32,9 @@ SECRET_PATTERNS = [
     r"(?i)AIza[0-9A-Za-z\-_]{20,}",
     r"(?i)sk-[A-Za-z0-9]{20,}",
 ]
+PII_PATTERNS = [
+    r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b",
+]
 
 def check_input(text: str) -> str | None:
     """Return block reason, or None if OK."""
@@ -45,13 +48,13 @@ def check_action_path(path:str | Path) -> str | None:
     """Only allow tasks files inside practice/."""
     p=Path(path).resolve()
     if p not in {f.resolve() for f in ALLOWED_TASK_FILES}:
-        return f"Aciton guardrail: yetkisiz dosya erişi engellendi ({p.name})."
+        return f"Action guardrail: yetkisiz dosya erisi engellendi ({p.name})."
     return None
 
-def moderate_output(text:str)-> str:
-    """Moderate output for secrets and other issues."""
+def moderate_output(text: str) -> str:
+    """Mask secrets and simple PII before a reply or a log line."""
     out = text
-    for pat in SECRET_PATTERNS:
+    for pat in SECRET_PATTERNS + PII_PATTERNS:
         out = re.sub(pat, "[REDACTED]", out)
     return out
     

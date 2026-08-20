@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–20 Done** · Phase 16–20 complete · Current: **Day 21**
+**Status:** Days **1–24 Done** · Phase 21–25 in progress · Current: **Day 25**
 
 ## Practice
 
@@ -31,6 +31,10 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 18 | SQL / text-to-SQL | [practice/sql_agent.py](./practice/sql_agent.py), [day-18.md](./day-18.md) |
 | 19 | Deploy + monitor | [practice/monitor_agent.py](./practice/monitor_agent.py), [day-19.md](./day-19.md) |
 | 20 | Advanced agent (capstone) | [practice/yoyo_advanced.py](./practice/yoyo_advanced.py), [practice/day-20-design.md](./practice/day-20-design.md), [day-20.md](./day-20.md) |
+| 21 | Orchestration / workflow | [practice/workflow_report.py](./practice/workflow_report.py), [day-21.md](./day-21.md) |
+| 22 | Vision (VLM) | [practice/vision_agent.py](./practice/vision_agent.py), [day-22.md](./day-22.md) |
+| 23 | Security lab | [practice/security_lab.py](./practice/security_lab.py), [day-23.md](./day-23.md) |
+| 24 | Cost (route + cache) | [practice/cost_agent.py](./practice/cost_agent.py), [day-24.md](./day-24.md) |
 
 ## Phases
 
@@ -40,6 +44,7 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Core capabilities | 6–10 | Complete |
 | Advanced fundamentals | 11–15 | **Complete** |
 | Specialized agents | 16–20 | **Complete** |
+| Orchestration & operations | 21–25 | In progress (Day 24 done) |
 
 ## Run practice
 

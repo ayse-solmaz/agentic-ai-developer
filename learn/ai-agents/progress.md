@@ -4,7 +4,7 @@
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
 **Last updated:** 2026-08-20  
-**Current:** Day 21 (orchestration) — next up
+**Current:** Day 25 (testing / QA) — next up
 
 ## Day-by-day log
 
@@ -30,6 +30,10 @@
 | 18 | SQL / text-to-SQL | Done | [day-18.md](./day-18.md) — schema then SELECT-only | [sql_agent.py](./practice/sql_agent.py) |
 | 19 | Deploy + monitor | Done | [day-19.md](./day-19.md) — request_id, latency, traces.jsonl | [monitor_agent.py](./practice/monitor_agent.py) |
 | 20 | Project: advanced agent | Done | [day-20.md](./day-20.md) — Yoyo Advanced synthesis | [yoyo_advanced.py](./practice/yoyo_advanced.py), [day-20-design.md](./practice/day-20-design.md) |
+| 21 | Orchestration / workflow | Done | [day-21.md](./day-21.md) — sequential + validate + abort | [workflow_report.py](./practice/workflow_report.py) |
+| 22 | Multi-modal (vision) | Done | [day-22.md](./day-22.md) — VLM + media jail | [vision_agent.py](./practice/vision_agent.py) |
+| 23 | Security & privacy | Done | [day-23.md](./day-23.md) — injection, leak, ACL | [security_lab.py](./practice/security_lab.py) |
+| 24 | Cost optimization | Done | [day-24.md](./day-24.md) — route, cache, token estimate | [cost_agent.py](./practice/cost_agent.py) |
 
 ## Phase progress
 
@@ -39,8 +43,9 @@
 | Core Agent Capabilities | 6–10 | Tools, memory, multi-agent, Yoyo | Complete |
 | Advanced Fundamentals | 11–15 | Resilience, HITL, safety, RAG | **Complete** |
 | Specialized Agent Development | 16–20 | Planning, code/SQL agents, deploy, capstone | **Complete** |
+| Orchestration & Operations | 21–25 | Workflows, multimodal, security, cost, tests | **In progress** (4/5) |
 
-## Skills gained (Days 1–20)
+## Skills gained (Days 1–24)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -56,7 +61,11 @@
 - Text-to-SQL: schema-first, SELECT-only SQLite agent
 - Deploy/monitor: request_id traces, latency, guardrail as a measured failure
 - Capstone synthesis: one Yoyo entrypoint (RAG + ToT + HITL + traces); plan ≠ execute
+- Orchestration: sequential workflow, shared state, validate branch, retry-then-abort
+- Multi-modal: VLM image describe in a path jail; audio = transcribe then text agent
+- Security: layered injection filter, PII/secret redact, role ACL, no shell
+- Cost: local vs cheap vs expensive routes, FAQ memoization, estimated tokens/USD in traces
 
 ## Next
 
-- **Day 21:** Agent orchestration and workflow management
+- **Day 25:** Agent testing and quality assurance
