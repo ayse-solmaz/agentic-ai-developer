@@ -1,5 +1,0 @@
-{"request_id": "1ba4ea54", "ts": "2026-08-21T21:53:06.071002+00:00", "question_chars": 12, "ok": true, "route": "hierarchy", "latency_ms": 5.59, "llm_calls": 0, "workers": ["tasks"], "error": null, "est_tokens": 0, "est_usd": 0.0}
-{"request_id": "537bc918", "ts": "2026-08-21T21:53:06.072826+00:00", "question_chars": 21, "ok": false, "route": "block", "latency_ms": 0.02, "llm_calls": 0, "workers": [], "error": "guardrail_or_fail", "est_tokens": 0, "est_usd": 0.0}
-{"request_id": "579359fe", "ts": "2026-08-21T21:53:06.073395+00:00", "question_chars": 18, "ok": true, "route": "out_of_domain", "latency_ms": 0.03, "llm_calls": 0, "workers": [], "error": null, "est_tokens": 0, "est_usd": 0.0}
-{"request_id": "6e709894", "ts": "2026-08-21T21:53:06.110791+00:00", "question_chars": 7, "ok": true, "route": "hierarchy", "latency_ms": 1.25, "llm_calls": 0, "workers": ["tasks"], "error": null, "est_tokens": 0, "est_usd": 0.0}
-{"request_id": "12633322", "ts": "2026-08-21T21:53:06.111173+00:00", "question_chars": 21, "ok": false, "route": "block", "latency_ms": 0.02, "llm_calls": 0, "workers": [], "error": "guardrail_or_fail", "est_tokens": 0, "est_usd": 0.0}
