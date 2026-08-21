@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–28 Done** · Phase 26–30 in progress · Current: **Day 29**
+**Status:** Days **1–38 Done** · Phase 36–40 in progress · Current: **Day 39**
 
 ## Practice
 
@@ -39,6 +39,16 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 26 | Mailbox / protocol | [practice/mailbox_agents.py](./practice/mailbox_agents.py), [day-26.md](./day-26.md) |
 | 27 | Domain scope | [practice/domain_agent.py](./practice/domain_agent.py), [day-27.md](./day-27.md) |
 | 28 | Perf lab | [practice/perf_lab.py](./practice/perf_lab.py), [day-28.md](./day-28.md) |
+| 29 | Frameworks | [practice/day-29-frameworks.md](./practice/day-29-frameworks.md), [day-29.md](./day-29.md) |
+| 30 | Capstone door | [practice/yoyo_prod.py](./practice/yoyo_prod.py), [practice/day-30-architecture.md](./practice/day-30-architecture.md), [day-30.md](./day-30.md) |
+| 31 | Hierarchical | [practice/hierarchical_yoyo.py](./practice/hierarchical_yoyo.py), [day-31.md](./day-31.md) |
+| 32 | Swarm | [practice/swarm_yoyo.py](./practice/swarm_yoyo.py), [day-32.md](./day-32.md) |
+| 33 | Workflow patterns | [practice/agentic_workflow.py](./practice/agentic_workflow.py), [day-33.md](./day-33.md) |
+| 34 | Event-driven | [practice/event_yoyo.py](./practice/event_yoyo.py), [day-34.md](./day-34.md) |
+| 35 | Arch A (events+hierarchy) | [practice/yoyo_arch.py](./practice/yoyo_arch.py), [practice/day-35-design.md](./practice/day-35-design.md), [day-35.md](./day-35.md) |
+| 36 | Docker / Compose | [practice/Dockerfile](./practice/Dockerfile), [practice/docker-compose.yml](./practice/docker-compose.yml), [day-36.md](./day-36.md) |
+| 37 | REST API | [practice/yoyo_api.py](./practice/yoyo_api.py), [day-37.md](./day-37.md) |
+| 38 | Observability | [practice/observability_lab.py](./practice/observability_lab.py), [day-38.md](./day-38.md) |
 
 ## Phases
 
@@ -49,7 +59,9 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Advanced fundamentals | 11–15 | **Complete** |
 | Specialized agents | 16–20 | **Complete** |
 | Orchestration & operations | 21–25 | **Complete** |
-| Domain agents & capstone | 26–30 | In progress (Day 28 done) |
+| Domain agents & capstone | 26–30 | **Complete** |
+| Advanced architectures | 31–35 | **Complete** |
+| Production deployment | 36–40 | In progress (Day 38 done) |
 
 ## Run practice
 

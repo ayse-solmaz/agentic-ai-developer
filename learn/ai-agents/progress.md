@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-08-20  
-**Current:** Day 29 (frameworks) — next up
+**Last updated:** 2026-08-21  
+**Current:** Day 39 (scaling) — next up
 
 ## Day-by-day log
 
@@ -38,6 +38,16 @@
 | 26 | Agent communication | Done | [day-26.md](./day-26.md) — mailbox protocol | [mailbox_agents.py](./practice/mailbox_agents.py) |
 | 27 | Domain-specific agents | Done | [day-27.md](./day-27.md) — Yoyo scope + ontology | [domain_agent.py](./practice/domain_agent.py) |
 | 28 | Performance | Done | [day-28.md](./day-28.md) — latency vs parallel wait | [perf_lab.py](./practice/perf_lab.py) |
+| 29 | Frameworks | Done | [day-29.md](./day-29.md) — LangChain vs AutoGen/LlamaIndex | [day-29-frameworks.md](./practice/day-29-frameworks.md) |
+| 30 | Capstone (Yoyo prod door) | Done | [day-30.md](./day-30.md) — route + domain + traces | [yoyo_prod.py](./practice/yoyo_prod.py), [day-30-architecture.md](./practice/day-30-architecture.md) |
+| 31 | Hierarchical agents | Done | [day-31.md](./day-31.md) — supervisor → tasks/notes/plan | [hierarchical_yoyo.py](./practice/hierarchical_yoyo.py) |
+| 32 | Swarm intelligence | Done | [day-32.md](./day-32.md) — scouts + board + consensus | [swarm_yoyo.py](./practice/swarm_yoyo.py) |
+| 33 | Agentic workflows | Done | [day-33.md](./day-33.md) — loop/parallel/conditional/linear | [agentic_workflow.py](./practice/agentic_workflow.py) |
+| 34 | Event-driven agents | Done | [day-34.md](./day-34.md) — emit → filter → route → react | [event_yoyo.py](./practice/event_yoyo.py) |
+| 35 | Arch project & review | Done | [day-35.md](./day-35.md) — A: events + hierarchy | [yoyo_arch.py](./practice/yoyo_arch.py), [day-35-design.md](./practice/day-35-design.md) |
+| 36 | Containerization | Done | [day-36.md](./day-36.md) — Docker image + Compose run | [Dockerfile](./practice/Dockerfile), [docker-compose.yml](./practice/docker-compose.yml) |
+| 37 | Agent REST API | Done | [day-37.md](./day-37.md) — FastAPI + key + /docs | [yoyo_api.py](./practice/yoyo_api.py) |
+| 38 | Observability | Done | [day-38.md](./day-38.md) — logs + metrics + alerts | [observability_lab.py](./practice/observability_lab.py) |
 
 ## Phase progress
 
@@ -48,9 +58,11 @@
 | Advanced Fundamentals | 11–15 | Resilience, HITL, safety, RAG | **Complete** |
 | Specialized Agent Development | 16–20 | Planning, code/SQL agents, deploy, capstone | **Complete** |
 | Orchestration & Operations | 21–25 | Workflows, multimodal, security, cost, tests | **Complete** |
-| Domain Agents & Capstone | 26–30 | Protocols, domain agents, perf, frameworks, capstone | **In progress** (3/5) |
+| Domain Agents & Capstone | 26–30 | Protocols, domain agents, perf, frameworks, capstone | **Complete** |
+| Advanced Architectures | 31–35 | Hierarchy, swarm, workflows, events | **Complete** |
+| Production Deployment | 36–40 | Containers, API, observability, scale | **In progress** (3/5) |
 
-## Skills gained (Days 1–28)
+## Skills gained (Days 1–38)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -74,7 +86,17 @@
 - Communication: from/to/type/body protocol, FIFO mailbox, leftover letter = HITL
 - Domain: ontology + out-of-scope refuse (no fake medical/legal/finance advice)
 - Performance: measure classify vs model wait; sequential latency sums, parallel ≈ slowest
+- Frameworks: LangChain = one agent + tools; AutoGen = agents talking; pick by job
+- Capstone: one CLI door; extra spaces in injection collapsed; local remind without LLM
+- Hierarchy: supervisor decomposes; workers (tasks/notes/plan) never call peers; token match for plan vs toplantisi
+- Swarm: no patron; scouts vote on shared board; consensus emerges from majority
+- Workflows: named patterns on shared state — loop, parallel, conditional, linear brief
+- Events: sources emit; filter then route; handlers react — no polling, no “run whole graph”
+- Arch review: chose A (events + hierarchy); swarm/workflow deferred with reason; edge paths tested
+- Containers: Dockerfile → image; Compose run; secrets not in image; same Day 35 routes inside container
+- API: FastAPI REST door; X-API-Key; rate limit; sync + async job; OpenAPI at /docs
+- Observability: structured logs, route metrics, threshold alerts (error rate / latency / cost)
 
 ## Next
 
-- **Day 29:** Open-source agent frameworks
+- **Day 39:** Scaling and performance
