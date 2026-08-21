@@ -1,0 +1,15 @@
+# Day 36 — one service now; Compose scales later (replicas / more services)
+services:
+  yoyo:
+    build: .
+    image: yoyo-arch:day36
+    # Secrets stay on the host — not in the Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # Override / document: never commit real keys
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+    # Interactive prod door later; today = non-interactive arch demo
+    # stdin_open: true
+    # tty: true

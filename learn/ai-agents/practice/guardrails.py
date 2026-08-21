@@ -38,7 +38,7 @@ PII_PATTERNS = [
 
 def check_input(text: str) -> str | None:
     """Return block reason, or None if OK."""
-    low = _fold(text)
+    low = re.sub(r"\s+", " ", _fold(text)).strip()
     for pat in INJECTION_PATTERNS + MASS_DELETE_PATTERNS:
         if re.search(pat, low, flags=re.IGNORECASE):
             return "Input guardrail: bu istek güvenlik nedeniyle reddedildi."

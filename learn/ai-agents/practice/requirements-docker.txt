@@ -1,0 +1,4 @@
+# Day 36 — slim image for Yoyo arch demo (no API key required)
+python-dotenv>=1.0.0
+langchain-core>=1.0.0
+langchain-classic>=1.0.0

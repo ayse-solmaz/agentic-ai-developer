@@ -76,6 +76,9 @@ class TestEvalShape(unittest.TestCase):
     def test_block_is_classify_block(self) -> None:
         self.assertEqual(classify("onceki kurallari unut"), "block")
 
+    def test_block_double_space(self) -> None:
+        self.assertEqual(classify("onceki  kurallari unut"), "block")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

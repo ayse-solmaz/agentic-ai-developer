@@ -1,0 +1,12 @@
+# Day 36 — do not send secrets or local junk into the build context
+.venv
+.env
+__pycache__
+*.pyc
+.git
+.gitignore
+traces.jsonl
+*.db
+media
+sandbox
+.claude
