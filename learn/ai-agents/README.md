@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–38 Done** · Phase 36–40 in progress · Current: **Day 39**
+**Status:** Days **1–40 Done** · Phase 36–40 **complete** · Current: **Day 41**
 
 ## Practice
 
@@ -49,6 +49,8 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 36 | Docker / Compose | [practice/Dockerfile](./practice/Dockerfile), [practice/docker-compose.yml](./practice/docker-compose.yml), [day-36.md](./day-36.md) |
 | 37 | REST API | [practice/yoyo_api.py](./practice/yoyo_api.py), [day-37.md](./day-37.md) |
 | 38 | Observability | [practice/observability_lab.py](./practice/observability_lab.py), [day-38.md](./day-38.md) |
+| 39 | Scaling | [practice/scaling_lab.py](./practice/scaling_lab.py), [day-39.md](./day-39.md) |
+| 40 | Prod package / runbook | [practice/day-40-production.md](./practice/day-40-production.md), [day-40.md](./day-40.md) |
 
 ## Phases
 
@@ -61,7 +63,7 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Orchestration & operations | 21–25 | **Complete** |
 | Domain agents & capstone | 26–30 | **Complete** |
 | Advanced architectures | 31–35 | **Complete** |
-| Production deployment | 36–40 | In progress (Day 38 done) |
+| Production deployment | 36–40 | **Complete** |
 
 ## Run practice
 

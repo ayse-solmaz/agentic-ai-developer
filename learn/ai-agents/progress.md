@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-08-21  
-**Current:** Day 39 (scaling) — next up
+**Last updated:** 2026-08-22  
+**Current:** Day 41 (support agents) — next up
 
 ## Day-by-day log
 
@@ -48,6 +48,8 @@
 | 36 | Containerization | Done | [day-36.md](./day-36.md) — Docker image + Compose run | [Dockerfile](./practice/Dockerfile), [docker-compose.yml](./practice/docker-compose.yml) |
 | 37 | Agent REST API | Done | [day-37.md](./day-37.md) — FastAPI + key + /docs | [yoyo_api.py](./practice/yoyo_api.py) |
 | 38 | Observability | Done | [day-38.md](./day-38.md) — logs + metrics + alerts | [observability_lab.py](./practice/observability_lab.py) |
+| 39 | Scaling & performance | Done | [day-39.md](./day-39.md) — cache + load test cold/warm | [scaling_lab.py](./practice/scaling_lab.py) |
+| 40 | Prod package & review | Done | [day-40.md](./day-40.md) — API image + runbook | [day-40-production.md](./practice/day-40-production.md) |
 
 ## Phase progress
 
@@ -60,9 +62,9 @@
 | Orchestration & Operations | 21–25 | Workflows, multimodal, security, cost, tests | **Complete** |
 | Domain Agents & Capstone | 26–30 | Protocols, domain agents, perf, frameworks, capstone | **Complete** |
 | Advanced Architectures | 31–35 | Hierarchy, swarm, workflows, events | **Complete** |
-| Production Deployment | 36–40 | Containers, API, observability, scale | **In progress** (3/5) |
+| Production Deployment | 36–40 | Containers, API, observability, scale | **Complete** |
 
-## Skills gained (Days 1–38)
+## Skills gained (Days 1–40)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -96,7 +98,9 @@
 - Containers: Dockerfile → image; Compose run; secrets not in image; same Day 35 routes inside container
 - API: FastAPI REST door; X-API-Key; rate limit; sync + async job; OpenAPI at /docs
 - Observability: structured logs, route metrics, threshold alerts (error rate / latency / cost)
+- Scaling: load-test mix; cache before scale-out; vertical ≠ LLM QPS; cold→warm saved calls/cost
+- Production package: Docker API door + runbook; secrets at runtime; honest gaps (shared cache, obs in-process, CI)
 
 ## Next
 
-- **Day 39:** Scaling and performance
+- **Day 41:** Specialized Agents (I) — customer support (KB + escalate)

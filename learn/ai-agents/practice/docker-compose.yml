@@ -1,15 +1,19 @@
-# Day 36 — one service now; Compose scales later (replicas / more services)
+# Day 40 — production-shaped Compose: API service + optional labs on host
 services:
-  yoyo:
+  yoyo-api:
     build: .
-    image: yoyo-arch:day36
-    # Secrets stay on the host — not in the Dockerfile
+    image: yoyo-api:day40
+    ports:
+      - "8000:8000"
     env_file:
       - path: .env
         required: false
     environment:
-      # Override / document: never commit real keys
+      YOYO_API_KEY: ${YOYO_API_KEY:-yoyo-lab-key}
+      YOYO_RATE_LIMIT: ${YOYO_RATE_LIMIT:-30}
       GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
-    # Interactive prod door later; today = non-interactive arch demo
-    # stdin_open: true
-    # tty: true
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3

@@ -1,19 +1,21 @@
-# Day 36 — containerize Yoyo (event+hierarchy demo; no key baked in)
+# Day 40 — production door: Yoyo Agent API (hierarchy). No secrets in layers.
 FROM python:3.12-slim
 
 WORKDIR /app
 
-# deps first (layer cache)
 COPY requirements-docker.txt .
 RUN pip install --no-cache-dir -r requirements-docker.txt
 
-# app code only — never COPY .env
-COPY guardrails.py domain_agent.py yoyo_llm.py hierarchical_yoyo.py yoyo_arch.py ./
+# App code only — never COPY .env
+COPY guardrails.py domain_agent.py yoyo_llm.py hierarchical_yoyo.py yoyo_arch.py yoyo_api.py ./
 COPY yoyo_notes.md ./
-# empty task list so remind/list work without host tasks.json
 RUN echo "[]" > tasks.json
 
 ENV PYTHONUNBUFFERED=1
-# API keys: inject at runtime (-e / compose env_file), not in the image
+ENV YOYO_API_KEY=yoyo-lab-key
+ENV YOYO_RATE_LIMIT=30
 
-CMD ["python", "yoyo_arch.py"]
+EXPOSE 8000
+
+# Runtime keys: compose env_file / -e — not baked into the image for real secrets
+CMD ["uvicorn", "yoyo_api:app", "--host", "0.0.0.0", "--port", "8000"]
