@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-08-22  
-**Current:** Day 41 (support agents) — next up
+**Last updated:** 2026-08-24  
+**Current:** Day 46 (reasoning) — next up
 
 ## Day-by-day log
 
@@ -50,6 +50,11 @@
 | 38 | Observability | Done | [day-38.md](./day-38.md) — logs + metrics + alerts | [observability_lab.py](./practice/observability_lab.py) |
 | 39 | Scaling & performance | Done | [day-39.md](./day-39.md) — cache + load test cold/warm | [scaling_lab.py](./practice/scaling_lab.py) |
 | 40 | Prod package & review | Done | [day-40.md](./day-40.md) — API image + runbook | [day-40-production.md](./practice/day-40-production.md) |
+| 41 | Customer support | Done | [day-41.md](./day-41.md) — KB answer or escalate | [support_agent.py](./practice/support_agent.py), [support_kb.md](./practice/support_kb.md) |
+| 42 | Research & analysis | Done | [day-42.md](./day-42.md) — multi-source + citations | [research_agent_lab.py](./practice/research_agent_lab.py) |
+| 43 | Content creation | Done | [day-43.md](./day-43.md) — plan → fact → draft → checklist | [content_agent.py](./practice/content_agent.py) |
+| 44 | Automation | Done | [day-44.md](./day-44.md) — tools + skip + retry | [automation_agent.py](./practice/automation_agent.py) |
+| 45 | Phase review | Done | [day-45.md](./day-45.md) — specialized smoke suite | [specialized_suite.py](./practice/specialized_suite.py), [day-45-specialized-review.md](./practice/day-45-specialized-review.md) |
 
 ## Phase progress
 
@@ -63,8 +68,9 @@
 | Domain Agents & Capstone | 26–30 | Protocols, domain agents, perf, frameworks, capstone | **Complete** |
 | Advanced Architectures | 31–35 | Hierarchy, swarm, workflows, events | **Complete** |
 | Production Deployment | 36–40 | Containers, API, observability, scale | **Complete** |
+| Specialized Agents (I) | 41–45 | Support, research, content, automation | **Complete** |
 
-## Skills gained (Days 1–40)
+## Skills gained (Days 1–45)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -100,7 +106,12 @@
 - Observability: structured logs, route metrics, threshold alerts (error rate / latency / cost)
 - Scaling: load-test mix; cache before scale-out; vertical ≠ LLM QPS; cold→warm saved calls/cost
 - Production package: Docker API door + runbook; secrets at runtime; honest gaps (shared cache, obs in-process, CI)
+- Support: answer from knowledge base or escalate; do not invent policy; channel is only the door
+- Research: multi-source gather; citations = which files used; verified only if 2+ agree
+- Content: plan → grounded facts → format draft → quality/SEO checklist; no invented claims
+- Automation: multi-step tools; empty skip; notify retry; guardrail on trigger
+- Specialized phase: four domain agents + smoke suite; right shape per job
 
 ## Next
 
-- **Day 41:** Specialized Agents (I) — customer support (KB + escalate)
+- **Day 46:** Advanced Reasoning — agent reasoning and planning

@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–40 Done** · Phase 36–40 **complete** · Current: **Day 41**
+**Status:** Days **1–45 Done** · Phase 41–45 **complete** · Current: **Day 46**
 
 ## Practice
 
@@ -51,6 +51,11 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 38 | Observability | [practice/observability_lab.py](./practice/observability_lab.py), [day-38.md](./day-38.md) |
 | 39 | Scaling | [practice/scaling_lab.py](./practice/scaling_lab.py), [day-39.md](./day-39.md) |
 | 40 | Prod package / runbook | [practice/day-40-production.md](./practice/day-40-production.md), [day-40.md](./day-40.md) |
+| 41 | Support (KB / escalate) | [practice/support_agent.py](./practice/support_agent.py), [practice/support_kb.md](./practice/support_kb.md), [day-41.md](./day-41.md) |
+| 42 | Research + citations | [practice/research_agent_lab.py](./practice/research_agent_lab.py), [practice/research_sources/](./practice/research_sources/), [day-42.md](./day-42.md) |
+| 43 | Content workflow | [practice/content_agent.py](./practice/content_agent.py), [day-43.md](./day-43.md) |
+| 44 | Automation | [practice/automation_agent.py](./practice/automation_agent.py), [day-44.md](./day-44.md) |
+| 45 | Phase review / suite | [practice/specialized_suite.py](./practice/specialized_suite.py), [practice/day-45-specialized-review.md](./practice/day-45-specialized-review.md), [day-45.md](./day-45.md) |
 
 ## Phases
 
@@ -64,6 +69,7 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Domain agents & capstone | 26–30 | **Complete** |
 | Advanced architectures | 31–35 | **Complete** |
 | Production deployment | 36–40 | **Complete** |
+| Specialized agents (I) | 41–45 | **Complete** |
 
 ## Run practice
 
