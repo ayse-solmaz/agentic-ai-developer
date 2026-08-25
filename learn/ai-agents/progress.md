@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-08-24  
-**Current:** Day 46 (reasoning) — next up
+**Last updated:** 2026-08-25  
+**Current:** Day 52 (enterprise authz) — next up
 
 ## Day-by-day log
 
@@ -55,6 +55,12 @@
 | 43 | Content creation | Done | [day-43.md](./day-43.md) — plan → fact → draft → checklist | [content_agent.py](./practice/content_agent.py) |
 | 44 | Automation | Done | [day-44.md](./day-44.md) — tools + skip + retry | [automation_agent.py](./practice/automation_agent.py) |
 | 45 | Phase review | Done | [day-45.md](./day-45.md) — specialized smoke suite | [specialized_suite.py](./practice/specialized_suite.py), [day-45-specialized-review.md](./practice/day-45-specialized-review.md) |
+| 46 | Reasoning & planning | Done | [day-46.md](./day-46.md) — CoT vs ToT + replan | [reasoning_lab.py](./practice/reasoning_lab.py) |
+| 47 | Learning & adaptation | Done | [day-47.md](./day-47.md) — few-shot + online + strategy | [learning_lab.py](./practice/learning_lab.py) |
+| 48 | Explainability | Done | [day-48.md](./day-48.md) — user why + engineer trace | [explain_lab.py](./practice/explain_lab.py) |
+| 49 | Future of agents | Done | [day-49.md](./day-49.md) — map + ölçüm stays | [future_lab.py](./practice/future_lab.py), [day-49-future.md](./practice/day-49-future.md) |
+| 50 | Phase capstone | Done | [day-50.md](./day-50.md) — wire events/learn/explain + door | [capstone50.py](./practice/capstone50.py), [day-50-capstone.md](./practice/day-50-capstone.md) |
+| 51 | Enterprise APIs | Done | [day-51.md](./day-51.md) — gateway + Yoyo service + queue | [enterprise_lab.py](./practice/enterprise_lab.py) |
 
 ## Phase progress
 
@@ -69,8 +75,10 @@
 | Advanced Architectures | 31–35 | Hierarchy, swarm, workflows, events | **Complete** |
 | Production Deployment | 36–40 | Containers, API, observability, scale | **Complete** |
 | Specialized Agents (I) | 41–45 | Support, research, content, automation | **Complete** |
+| Advanced Reasoning & Capstone | 46–50 | Reasoning, learning, explainability, future, capstone | **Complete** |
+| Enterprise Integration | 51–55 | APIs/microservices, authn/z, privacy, governance | **In progress** (1/5) |
 
-## Skills gained (Days 1–45)
+## Skills gained (Days 1–51)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -111,7 +119,13 @@
 - Content: plan → grounded facts → format draft → quality/SEO checklist; no invented claims
 - Automation: multi-step tools; empty skip; notify retry; guardrail on trigger
 - Specialized phase: four domain agents + smoke suite; right shape per job
+- Reasoning: CoT = one chain; ToT = score branches; fail → replan + meta why
+- Learning: few-shot + online store, not fine-tune; feedback loop; tool/strategy adapt; do not learn from injection
+- Explainability: user why vs engineer trace; decision tree; no attack echo / no secrets in the "neden"
+- Future: models churn; loop transfers; future-proof = boundaries + **measure** + delivery (picked: ölçüm)
+- Capstone 50: wire don't rewrite; events+hierarchy + learn/explain; production door; list API gaps
+- Enterprise door: Yoyo is one microservice; gateway routes/auth/rate; queue for async; neighbors are not imported
 
 ## Next
 
-- **Day 46:** Advanced Reasoning — agent reasoning and planning
+- **Day 52:** Enterprise authentication and authorization

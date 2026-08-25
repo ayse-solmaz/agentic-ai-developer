@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–45 Done** · Phase 41–45 **complete** · Current: **Day 46**
+**Status:** Days **1–51 Done** · Phase 51–55 in progress · Current: **Day 52**
 
 ## Practice
 
@@ -56,6 +56,12 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 43 | Content workflow | [practice/content_agent.py](./practice/content_agent.py), [day-43.md](./day-43.md) |
 | 44 | Automation | [practice/automation_agent.py](./practice/automation_agent.py), [day-44.md](./day-44.md) |
 | 45 | Phase review / suite | [practice/specialized_suite.py](./practice/specialized_suite.py), [practice/day-45-specialized-review.md](./practice/day-45-specialized-review.md), [day-45.md](./day-45.md) |
+| 46 | Reasoning (CoT/ToT) | [practice/reasoning_lab.py](./practice/reasoning_lab.py), [day-46.md](./day-46.md) |
+| 47 | Learning / adaptation | [practice/learning_lab.py](./practice/learning_lab.py), [day-47.md](./day-47.md) |
+| 48 | Explainability | [practice/explain_lab.py](./practice/explain_lab.py), [day-48.md](./day-48.md) |
+| 49 | Future of agents | [practice/future_lab.py](./practice/future_lab.py), [practice/day-49-future.md](./practice/day-49-future.md), [day-49.md](./day-49.md) |
+| 50 | Phase capstone | [practice/capstone50.py](./practice/capstone50.py), [practice/day-50-capstone.md](./practice/day-50-capstone.md), [day-50.md](./day-50.md) |
+| 51 | Enterprise APIs | [practice/enterprise_lab.py](./practice/enterprise_lab.py), [day-51.md](./day-51.md) |
 
 ## Phases
 
@@ -70,6 +76,8 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Advanced architectures | 31–35 | **Complete** |
 | Production deployment | 36–40 | **Complete** |
 | Specialized agents (I) | 41–45 | **Complete** |
+| Advanced reasoning & capstone | 46–50 | **Complete** |
+| Enterprise integration | 51–55 | In progress (Day 52) |
 
 ## Run practice
 
