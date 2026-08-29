@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-08-25  
-**Current:** Day 52 (enterprise authz) — next up
+**Last updated:** 2026-08-29  
+**Current:** Day 61 (e-commerce) — next up
 
 ## Day-by-day log
 
@@ -61,6 +61,15 @@
 | 49 | Future of agents | Done | [day-49.md](./day-49.md) — map + ölçüm stays | [future_lab.py](./practice/future_lab.py), [day-49-future.md](./practice/day-49-future.md) |
 | 50 | Phase capstone | Done | [day-50.md](./day-50.md) — wire events/learn/explain + door | [capstone50.py](./practice/capstone50.py), [day-50-capstone.md](./practice/day-50-capstone.md) |
 | 51 | Enterprise APIs | Done | [day-51.md](./day-51.md) — gateway + Yoyo service + queue | [enterprise_lab.py](./practice/enterprise_lab.py) |
+| 52 | Authn / authz | Done | [day-52.md](./day-52.md) — JWT-shaped ident + RBAC + tenant + audit | [authz_lab.py](./practice/authz_lab.py) |
+| 53 | Privacy / compliance | Done | [day-53.md](./day-53.md) — minimize, consent, retain, refuse | [privacy_lab.py](./practice/privacy_lab.py) |
+| 54 | Governance | Done | [day-54.md](./day-54.md) — registry + lifecycle + rollback + owner | [governance_lab.py](./practice/governance_lab.py) |
+| 55 | Enterprise review | Done | [day-55.md](./day-55.md) — one path 51–54 + gaps | [enterprise55.py](./practice/enterprise55.py), [day-55-enterprise.md](./practice/day-55-enterprise.md) |
+| 56 | Collaboration | Done | [day-56.md](./day-56.md) — letters + pub/sub + board + conflict rule | [collab_lab.py](./practice/collab_lab.py) |
+| 57 | Efficiency | Done | [day-57.md](./day-57.md) — short prompt, model pick, 3 caches, batch | [efficiency_lab.py](./practice/efficiency_lab.py) |
+| 58 | Reliability | Done | [day-58.md](./day-58.md) — retry vs permanent, breaker, degrade | [reliability_lab.py](./practice/reliability_lab.py) |
+| 59 | Evaluation | Done | [day-59.md](./day-59.md) — golden suite, A/B cost+latency, no drift | [eval_lab.py](./practice/eval_lab.py) |
+| 60 | Phase review | Done | [day-60.md](./day-60.md) — wire 56–59 + gaps | [review60.py](./practice/review60.py), [day-60-review.md](./practice/day-60-review.md) |
 
 ## Phase progress
 
@@ -76,9 +85,11 @@
 | Production Deployment | 36–40 | Containers, API, observability, scale | **Complete** |
 | Specialized Agents (I) | 41–45 | Support, research, content, automation | **Complete** |
 | Advanced Reasoning & Capstone | 46–50 | Reasoning, learning, explainability, future, capstone | **Complete** |
-| Enterprise Integration | 51–55 | APIs/microservices, authn/z, privacy, governance | **In progress** (1/5) |
+| Enterprise Integration | 51–55 | APIs/microservices, authn/z, privacy, governance | **Complete** |
+| Advanced Topics (I) | 56–60 | Collaboration, efficiency, reliability, eval | **Complete** |
+| Real-World Applications | 61–65 | E-commerce, healthcare, finance, education | Not started |
 
-## Skills gained (Days 1–51)
+## Skills gained (Days 1–60)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -125,7 +136,16 @@
 - Future: models churn; loop transfers; future-proof = boundaries + **measure** + delivery (picked: ölçüm)
 - Capstone 50: wire don't rewrite; events+hierarchy + learn/explain; production door; list API gaps
 - Enterprise door: Yoyo is one microservice; gateway routes/auth/rate; queue for async; neighbors are not imported
+- Authz: 401 vs 403; RBAC then tenant ABAC; audit without tokens; admin still hits guardrails
+- Privacy: minimize + consent + retention; mask before logs/model; refuse card and medical
+- Governance: registry (who/what/version); lifecycle draft→test→prod→retired; rollback; no owner / not in book = no serve
+- Enterprise package: one path defter→kapı→kimlik→kasa→ajan; 401 vs 403 vs 404; honest gaps (not one stack, no real IdP)
+- Collaboration: mailbox request-response; pub/sub; shared board; conflict → rule or HITL; peer letters still untrusted
+- Efficiency: local first; shorter prompt; small vs big model; answer/tool/embed cache; batch; do not cache injection
+- Reliability: retry transient only; breaker after N fails; degrade to local; do not retry injection
+- Evaluation: custom golden suite first; A/B on cost/latency/accuracy/safety; re-run = continuous; HELM later
+- Phase 56–60: wire collab + cheap path + breaker + golden card; say the gaps (no HELM, not one API process)
 
 ## Next
 
-- **Day 52:** Enterprise authentication and authorization
+- **Day 61:** E-commerce agents

@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–51 Done** · Phase 51–55 in progress · Current: **Day 52**
+**Status:** Days **1–60 Done** · Phase 61–65 next · Current: **Day 61**
 
 ## Practice
 
@@ -62,6 +62,15 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 49 | Future of agents | [practice/future_lab.py](./practice/future_lab.py), [practice/day-49-future.md](./practice/day-49-future.md), [day-49.md](./day-49.md) |
 | 50 | Phase capstone | [practice/capstone50.py](./practice/capstone50.py), [practice/day-50-capstone.md](./practice/day-50-capstone.md), [day-50.md](./day-50.md) |
 | 51 | Enterprise APIs | [practice/enterprise_lab.py](./practice/enterprise_lab.py), [day-51.md](./day-51.md) |
+| 52 | Authn / authz | [practice/authz_lab.py](./practice/authz_lab.py), [day-52.md](./day-52.md) |
+| 53 | Privacy / compliance | [practice/privacy_lab.py](./practice/privacy_lab.py), [day-53.md](./day-53.md) |
+| 54 | Governance | [practice/governance_lab.py](./practice/governance_lab.py), [day-54.md](./day-54.md) |
+| 55 | Enterprise review | [practice/enterprise55.py](./practice/enterprise55.py), [practice/day-55-enterprise.md](./practice/day-55-enterprise.md), [day-55.md](./day-55.md) |
+| 56 | Collaboration | [practice/collab_lab.py](./practice/collab_lab.py), [day-56.md](./day-56.md) |
+| 57 | Efficiency | [practice/efficiency_lab.py](./practice/efficiency_lab.py), [day-57.md](./day-57.md) |
+| 58 | Reliability | [practice/reliability_lab.py](./practice/reliability_lab.py), [day-58.md](./day-58.md) |
+| 59 | Evaluation | [practice/eval_lab.py](./practice/eval_lab.py), [day-59.md](./day-59.md) |
+| 60 | Phase review | [practice/review60.py](./practice/review60.py), [practice/day-60-review.md](./practice/day-60-review.md), [day-60.md](./day-60.md) |
 
 ## Phases
 
@@ -77,7 +86,9 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Production deployment | 36–40 | **Complete** |
 | Specialized agents (I) | 41–45 | **Complete** |
 | Advanced reasoning & capstone | 46–50 | **Complete** |
-| Enterprise integration | 51–55 | In progress (Day 52) |
+| Enterprise integration | 51–55 | **Complete** |
+| Advanced topics (I) | 56–60 | **Complete** |
+| Real-world applications | 61–65 | Not started (Day 61) |
 
 ## Run practice
 
