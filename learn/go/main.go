@@ -2,36 +2,36 @@ package main
 
 import "fmt"
 
-type Speaker interface {
-	Speak() string
-}
-
 type User struct {
 	Name string
 }
 
-func (u User) Speak() string {
-	return u.Name + " says hi"
+func (u User) Role() string {
+	return "member"
 }
 
-type Bot struct{}
-
-func (b Bot) Speak() string {
-	return "beep"
+func (u User) Greet() string {
+	return "hi " + u.Name
 }
 
-func announce(s Speaker) {
-	fmt.Println(s.Speak())
+type Admin struct {
+	User
+	Level int
+}
+
+func (a Admin) Role() string {
+	return "admin"
 }
 
 func main() {
-	announce(User{Name: "ada"})
-	announce(Bot{})
+	a := Admin{
+		User:  User{Name: "ada"},
+		Level: 3,
+	}
 
-	var empty Speaker
-	fmt.Println("empty iface nil?", empty == nil)
-
-	var p *User
-	var wrapped Speaker = p
-	fmt.Println("wrapped nil pointer, iface nil?", wrapped == nil)
+	fmt.Println("promoted Name:", a.Name)
+	fmt.Println("promoted Greet:", a.Greet())
+	fmt.Println("outer Role:", a.Role())
+	fmt.Println("inner Role:", a.User.Role())
+	fmt.Println("level:", a.Level)
 }
