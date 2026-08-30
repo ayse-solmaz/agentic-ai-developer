@@ -1,18 +1,19 @@
 package main
-import (
-	"fmt"
-	"example.com/hello/calc"
-)
+
+import "fmt"
+
+func show(p *int) {
+	if p == nil {
+		fmt.Println("nil, skip")
+		return
+	}
+	fmt.Println("value:", *p)
+}
 
 func main() {
-	fmt.Println("sum:", calc.Add(2, 3))
+	var missing *int
+	show(missing)
 
-	n, ok := calc.Divide(10, 2)
-	fmt.Println("10/2:", n, ok)
-
-	n, ok = calc.Divide(10, 0)
-	fmt.Println("10/0:", n, ok)
-
-	a, b := calc.Split(7)
-	fmt.Println("split:", a, b)
+	n := 7
+	show(&n)
 }
