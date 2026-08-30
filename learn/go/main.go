@@ -7,30 +7,30 @@ type User struct {
 	Age  int
 }
 
+func (u User) BirthdayCopy() {
+	u.Age++
+}
+
+func (u *User) Birthday() {
+	u.Age++
+}
+
 func (u User) Adult() bool {
 	return u.Age >= 18
 }
 
 func main() {
-	var z User
-	fmt.Println("zero:", z)
+	u := User{Name: "ada", Age: 19}
 
-	positional := User{"can", 21}
-	fmt.Println("positional:", positional)
+	u.BirthdayCopy()
+	fmt.Println("after copy Birthday:", u.Age)
 
-	keyed := User{Name: "ada", Age: 19}
-	fmt.Println("keyed:", keyed)
+	u.Birthday()
+	fmt.Println("after pointer Birthday:", u.Age)
 
-	p := &User{Name: "efe", Age: 30}
-	fmt.Println("pointer:", p.Name, p.Age)
+	fmt.Println("adult?", u.Adult())
 
-	fmt.Println("ada adult?", keyed.Adult())
-	fmt.Println("baby adult?", User{Name: "ali", Age: 3}.Adult())
-
-	fmt.Printf("%%v  %v\n", keyed)
-	fmt.Printf("%%+v %+v\n", keyed)
-	fmt.Printf("%%#v %#v\n", keyed)
-}
-func (u User) String() string {
-	return fmt.Sprintf("%s (%d)", u.Name, u.Age)
+	p := &u
+	p.Birthday()
+	fmt.Println("via pointer var:", u.Age)
 }
