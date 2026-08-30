@@ -1,44 +1,36 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"strconv"
+import "fmt"
 
-	"example.com/hello/calc"
-)
+type User struct {
+	Name string
+	Age  int
+}
+
+func (u User) Adult() bool {
+	return u.Age >= 18
+}
 
 func main() {
-	fmt.Println("100C ->", calc.CtoF(100), "F")
-	fmt.Println("32F ->", calc.FtoC(32), "C")
+	var z User
+	fmt.Println("zero:", z)
 
-	if len(os.Args) != 4 {
-		fmt.Println("usage: go run . 10 + 3")
-		return
-	}
+	positional := User{"can", 21}
+	fmt.Println("positional:", positional)
 
-	a, err1 := strconv.Atoi(os.Args[1])
-	op := os.Args[2]
-	b, err2 := strconv.Atoi(os.Args[3])
-	if err1 != nil || err2 != nil {
-		fmt.Println("need two integers")
-		return
-	}
+	keyed := User{Name: "ada", Age: 19}
+	fmt.Println("keyed:", keyed)
 
-	switch op {
-	case "+":
-		fmt.Println(a + b)
-	case "-":
-		fmt.Println(a - b)
-	case "*":
-		fmt.Println(a * b)
-	case "/":
-		if b == 0 {
-			fmt.Println("division by zero")
-			return
-		}
-		fmt.Println(a / b)
-	default:
-		fmt.Println("unknown operator")
-	}
+	p := &User{Name: "efe", Age: 30}
+	fmt.Println("pointer:", p.Name, p.Age)
+
+	fmt.Println("ada adult?", keyed.Adult())
+	fmt.Println("baby adult?", User{Name: "ali", Age: 3}.Adult())
+
+	fmt.Printf("%%v  %v\n", keyed)
+	fmt.Printf("%%+v %+v\n", keyed)
+	fmt.Printf("%%#v %#v\n", keyed)
+}
+func (u User) String() string {
+	return fmt.Sprintf("%s (%d)", u.Name, u.Age)
 }
