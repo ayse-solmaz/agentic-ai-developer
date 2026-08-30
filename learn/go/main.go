@@ -2,35 +2,36 @@ package main
 
 import "fmt"
 
+type Speaker interface {
+	Speak() string
+}
+
 type User struct {
 	Name string
-	Age  int
 }
 
-func (u User) BirthdayCopy() {
-	u.Age++
+func (u User) Speak() string {
+	return u.Name + " says hi"
 }
 
-func (u *User) Birthday() {
-	u.Age++
+type Bot struct{}
+
+func (b Bot) Speak() string {
+	return "beep"
 }
 
-func (u User) Adult() bool {
-	return u.Age >= 18
+func announce(s Speaker) {
+	fmt.Println(s.Speak())
 }
 
 func main() {
-	u := User{Name: "ada", Age: 19}
+	announce(User{Name: "ada"})
+	announce(Bot{})
 
-	u.BirthdayCopy()
-	fmt.Println("after copy Birthday:", u.Age)
+	var empty Speaker
+	fmt.Println("empty iface nil?", empty == nil)
 
-	u.Birthday()
-	fmt.Println("after pointer Birthday:", u.Age)
-
-	fmt.Println("adult?", u.Adult())
-
-	p := &u
-	p.Birthday()
-	fmt.Println("via pointer var:", u.Age)
+	var p *User
+	var wrapped Speaker = p
+	fmt.Println("wrapped nil pointer, iface nil?", wrapped == nil)
 }
