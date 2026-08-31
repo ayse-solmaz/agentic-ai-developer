@@ -1,33 +1,43 @@
 package main
 
-import (
-	"fmt"
-	"sync"
-	"time"
-)
+import "fmt"
+
+func worker(id int, jobs <-chan int, results chan<- int) {
+	for n := range jobs {
+		results <- n * n
+	}
+}
 
 func main() {
-	var wg sync.WaitGroup
-	for i := 1; i <= 3; i++ {
-		wg.Add(1)
-		go func(n int) {
-			defer wg.Done()
-			time.Sleep(time.Millisecond * time.Duration(4-n))
-			fmt.Println("worker", n)
-		}(i)
-	}
-	wg.Wait()
-	fmt.Println("all done")
+	ping := make(chan string)
+	go func() {
+		ping <- "hello"
+	}()
+	fmt.Println("unbuffered:", <-ping)
 
-	var n int
-	var wg2 sync.WaitGroup
-	for i := 0; i < 1000; i++ {
-		wg2.Add(1)
-		go func() {
-			defer wg2.Done()
-			n++
-		}()
+	buf := make(chan int, 2)
+	buf <- 1
+	buf <- 2
+	fmt.Println("buffered:", <-buf, <-buf)
+
+	ch := make(chan int)
+	go func() {
+		ch <- 10
+		ch <- 20
+		close(ch)
+	}()
+	fmt.Print("range:")
+	for v := range ch {
+		fmt.Print(" ", v)
 	}
-	wg2.Wait()
-	fmt.Println("racy count", n)
+	fmt.Println()
+
+	jobs := make(chan int, 3)
+	results := make(chan int, 3)
+	go worker(1, jobs, results)
+	jobs <- 2
+	jobs <- 3
+	jobs <- 4
+	close(jobs)
+	fmt.Println("squares:", <-results, <-results, <-results)
 }
