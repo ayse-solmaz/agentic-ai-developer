@@ -1,36 +1,64 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"bytes"
+	"errors"
+	"fmt"
+	"io"
+	"os"
+	"strings"
+)
 
-func bumpFirst(s []int) {
-	s[0] = 99
+func readMissing() error {
+	_, err := os.ReadFile("no-such-day13.txt")
+	if err != nil {
+		return fmt.Errorf("read missing: %w", err)
+	}
+	return nil
 }
 
 func main() {
-	s := make([]int, 0, 4)
-	fmt.Println("len", len(s), "cap", cap(s))
-	s = append(s, 1, 2, 3)
-	fmt.Println("after append", s, "len", len(s), "cap", cap(s))
-
-	part := s[1:3]
-	fmt.Println("slice [1:3]", part)
-	part[0] = 8
-	fmt.Println("s after part[0]=8", s)
-
-	cp := make([]int, len(s))
-	copy(cp, s)
-	cp[0] = 7
-	fmt.Println("s after copy mutate", s, "cp", cp)
-
-	a := []int{1, 2, 3}
-	bumpFirst(a)
-	fmt.Println("after bumpFirst", a)
-
-	ages := map[string]int{"ada": 19}
-	ages["can"] = 21
-	v, ok := ages["efe"]
-	fmt.Println("efe", v, ok)
-	for k, n := range ages {
-		fmt.Println("range", k, n)
+	name := "day13.txt"
+	if err := os.WriteFile(name, []byte("hello\nacademy\n"), 0644); err != nil {
+		fmt.Println("write:", err)
+		return
 	}
+
+	raw, err := os.ReadFile(name)
+	if err != nil {
+		fmt.Println("read:", err)
+		return
+	}
+	fmt.Print("ReadFile:", string(raw))
+
+	f, err := os.Open(name)
+	if err != nil {
+		fmt.Println("open:", err)
+		return
+	}
+	defer f.Close()
+
+	sc := bufio.NewScanner(f)
+	for sc.Scan() {
+		fmt.Println("line:", sc.Text())
+	}
+	if err := sc.Err(); err != nil {
+		fmt.Println("scan:", err)
+		return
+	}
+
+	var buf bytes.Buffer
+	w := bufio.NewWriter(&buf)
+	if _, err := io.Copy(w, strings.NewReader("via io.Copy")); err != nil {
+		fmt.Println("copy:", err)
+		return
+	}
+	w.Flush()
+	fmt.Println("copy out:", buf.String())
+
+	err = readMissing()
+	fmt.Println("missing wrapped:", err)
+	fmt.Println("IsNotExist:", os.IsNotExist(err))
+	fmt.Println("errors.Is:", errors.Is(err, os.ErrNotExist))
 }
