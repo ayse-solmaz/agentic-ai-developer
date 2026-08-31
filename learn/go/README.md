@@ -10,7 +10,7 @@ Curriculum source: `one-hundered-days/days/go/`. Practice stays in this repo.
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–10 Done** · Phases 1–5 and 6–10 complete · Next: **Day 11** (errors)
+**Status:** Days **1–11 Done** · Next: **Day 12** (slices and maps)
 
 ## Practice
 
@@ -25,9 +25,10 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 7 | receivers | [day-7.md](./day-7.md) |
 | 8 | interfaces | [day-8.md](./day-8.md) |
 | 9 | embedding | [day-9.md](./day-9.md) |
-| 10 | Shape + Logger kata | [day-10.md](./day-10.md), [main.go](./main.go) |
+| 10 | Shape + Logger kata | [day-10.md](./day-10.md) |
+| 11 | errors | [day-11.md](./day-11.md), [main.go](./main.go) |
 
-`main.go` currently holds the **Day 10** kata.
+`main.go` currently holds the **Day 11** error lab. Day 12 will replace it.
 
 ```powershell
 cd C:\Users\aysnu\agentic-ai-developer\learn\go

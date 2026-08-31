@@ -1,54 +1,36 @@
 package main
 
-import (
-	"errors"
-	"fmt"
-)
+import "fmt"
 
-var ErrEmpty = errors.New("empty name")
-
-type BadAgeError struct {
-	Age int
-}
-
-func (e BadAgeError) Error() string {
-	return fmt.Sprintf("bad age %d", e.Age)
-}
-
-func parseUser(name string, age int) (string, error) {
-	if name == "" {
-		return "", ErrEmpty
-	}
-	if age < 0 {
-		return "", BadAgeError{Age: age}
-	}
-	return name, nil
-}
-
-func load(name string, age int) (string, error) {
-	u, err := parseUser(name, age)
-	if err != nil {
-		return "", fmt.Errorf("load: %w", err)
-	}
-	return u, nil
+func bumpFirst(s []int) {
+	s[0] = 99
 }
 
 func main() {
-	if _, err := load("", 1); err != nil {
-		fmt.Println("empty:", err)
-		fmt.Println("is ErrEmpty:", errors.Is(err, ErrEmpty))
-	}
+	s := make([]int, 0, 4)
+	fmt.Println("len", len(s), "cap", cap(s))
+	s = append(s, 1, 2, 3)
+	fmt.Println("after append", s, "len", len(s), "cap", cap(s))
 
-	if _, err := load("ada", -3); err != nil {
-		fmt.Println("age:", err)
-		var bad BadAgeError
-		fmt.Println("as BadAge:", errors.As(err, &bad), bad.Age)
-	}
+	part := s[1:3]
+	fmt.Println("slice [1:3]", part)
+	part[0] = 8
+	fmt.Println("s after part[0]=8", s)
 
-	u, err := load("ada", 19)
-	if err != nil {
-		fmt.Println("unexpected", err)
-		return
+	cp := make([]int, len(s))
+	copy(cp, s)
+	cp[0] = 7
+	fmt.Println("s after copy mutate", s, "cp", cp)
+
+	a := []int{1, 2, 3}
+	bumpFirst(a)
+	fmt.Println("after bumpFirst", a)
+
+	ages := map[string]int{"ada": 19}
+	ages["can"] = 21
+	v, ok := ages["efe"]
+	fmt.Println("efe", v, ok)
+	for k, n := range ages {
+		fmt.Println("range", k, n)
 	}
-	fmt.Println("ok", u)
 }

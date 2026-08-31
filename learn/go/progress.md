@@ -2,8 +2,8 @@
 
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** Go (100 days)  
-**Last updated:** 2026-08-30  
-**Current:** Day 11 next (errors) — phases 1–5 and 6–10 closed
+**Last updated:** 2026-08-31  
+**Current:** Day 12 (slices/maps) — Day 11 done
 
 ## Day-by-day log
 
@@ -18,7 +18,8 @@
 | 7 | Methods and receivers | Done | copy Birthday stays 19; pointer 20 then 21 | [day-7.md](./day-7.md) |
 | 8 | Interfaces | Done | `Speaker`; empty nil true; wrapped nil ptr false | [day-8.md](./day-8.md) |
 | 9 | Embedding | Done | `Admin` embeds `User`; Role shadow admin vs member | [day-9.md](./day-9.md) |
-| 10 | Phase practice | Done | Shape Circle/Rectangle, Logger, table, `go fmt` | [day-10.md](./day-10.md), [main.go](./main.go) |
+| 10 | Phase practice | Done | Shape Circle/Rectangle, Logger, table, `go fmt` | [day-10.md](./day-10.md) |
+| 11 | Error values | Done | wrap `%w`; `Is` ErrEmpty; `As` BadAge | [day-11.md](./day-11.md), [main.go](./main.go) |
 
 ## Phase progress
 
@@ -26,7 +27,7 @@
 |-------|------|-------|--------|
 | Go Fundamentals | 1–5 | Toolchain, types, control flow, functions, packages, pointers | **Complete** |
 | Structs, Methods & Interfaces | 6–10 | Structs, methods, interfaces | **Complete** |
-| Errors, Collections & I/O | 11–15 | Error handling, slices, maps, file I/O, JSON | Next |
+| Errors, Collections & I/O | 11–15 | Error handling, slices, maps, file I/O, JSON | In progress (11/15) |
 | Concurrency Basics | 16–20 | | |
 | Testing Fundamentals | 21–25 | | |
 | HTTP Basics & Handlers | 26–30 | | |
