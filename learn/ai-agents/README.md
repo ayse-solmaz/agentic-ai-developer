@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–60 Done** · Phase 61–65 next · Current: **Day 61**
+**Status:** Days **1–63 Done** · Phase 61–65 in progress · Current: **Day 64**
 
 ## Practice
 
@@ -71,6 +71,16 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 58 | Reliability | [practice/reliability_lab.py](./practice/reliability_lab.py), [day-58.md](./day-58.md) |
 | 59 | Evaluation | [practice/eval_lab.py](./practice/eval_lab.py), [day-59.md](./day-59.md) |
 | 60 | Phase review | [practice/review60.py](./practice/review60.py), [practice/day-60-review.md](./practice/day-60-review.md), [day-60.md](./day-60.md) |
+| 61 | E-commerce | [practice/shop_lab.py](./practice/shop_lab.py), [day-61.md](./day-61.md) |
+| 62 | Healthcare | [practice/clinic_lab.py](./practice/clinic_lab.py), [day-62.md](./day-62.md) |
+| 63 | Finance | [practice/bank_lab.py](./practice/bank_lab.py), [day-63.md](./day-63.md) |
+| 64 | Education | [practice/tutor_lab.py](./practice/tutor_lab.py), [day-64.md](./day-64.md) |
+| 65 | Phase review | [practice/review65.py](./practice/review65.py), [day-65.md](./day-65.md) |
+| 66 | Open source frameworks | [practice/oss_lab.py](./practice/oss_lab.py), [day-66.md](./day-66.md) |
+| 67 | Papers | [practice/paper_lab.py](./practice/paper_lab.py), [day-67.md](./day-67.md) |
+| 68 | Experimental architectures | [practice/proto_lab.py](./practice/proto_lab.py), [day-68.md](./day-68.md) |
+| 69 | Communities | [practice/community_lab.py](./practice/community_lab.py), [day-69.md](./day-69.md) |
+| 70 | Phase review | [practice/review70.py](./practice/review70.py), [day-70.md](./day-70.md) |
 
 ## Phases
 
@@ -88,7 +98,9 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Advanced reasoning & capstone | 46–50 | **Complete** |
 | Enterprise integration | 51–55 | **Complete** |
 | Advanced topics (I) | 56–60 | **Complete** |
-| Real-world applications | 61–65 | Not started (Day 61) |
+| Real-world applications | 61–65 | **Complete** |
+| Research & innovation | 66–70 | **Complete** |
+| Advanced patterns | 71–75 | In progress (Day 71) |
 
 ## Run practice
 

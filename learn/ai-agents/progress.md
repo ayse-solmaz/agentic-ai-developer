@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-08-29  
-**Current:** Day 61 (e-commerce) — next up
+**Last updated:** 2026-08-31  
+**Current:** Day 71 (self-improving) — next up
 
 ## Day-by-day log
 
@@ -70,6 +70,16 @@
 | 58 | Reliability | Done | [day-58.md](./day-58.md) — retry vs permanent, breaker, degrade | [reliability_lab.py](./practice/reliability_lab.py) |
 | 59 | Evaluation | Done | [day-59.md](./day-59.md) — golden suite, A/B cost+latency, no drift | [eval_lab.py](./practice/eval_lab.py) |
 | 60 | Phase review | Done | [day-60.md](./day-60.md) — wire 56–59 + gaps | [review60.py](./practice/review60.py), [day-60-review.md](./practice/day-60-review.md) |
+| 61 | E-commerce | Done | [day-61.md](./day-61.md) — catalog search, HITL pay, no fake stock | [shop_lab.py](./practice/shop_lab.py) |
+| 62 | Healthcare | Done | [day-62.md](./day-62.md) — schedule/remind/FAQ; no diagnosis; HITL; no raw EHR | [clinic_lab.py](./practice/clinic_lab.py) |
+| 63 | Finance | Done | [day-63.md](./day-63.md) — ledger; no advice; HITL transfer; audit no PAN | [bank_lab.py](./practice/bank_lab.py) |
+| 64 | Education | Done | [day-64.md](./day-64.md) — hint first; COPPA no extra PII; grades HITL not in chat | [tutor_lab.py](./practice/tutor_lab.py) |
+| 65 | Phase review | Done | [day-65.md](./day-65.md) — wire 61–64 + gaps | [review65.py](./practice/review65.py) |
+| 66 | Open source frameworks | Done | [day-66.md](./day-66.md) — pick by job; small contrib; no second loop | [oss_lab.py](./practice/oss_lab.py) |
+| 67 | Papers | Done | [day-67.md](./day-67.md) — slice not dump; AutoGPT loop not shipped | [paper_lab.py](./practice/paper_lab.py) |
+| 68 | Experimental architectures | Done | [day-68.md](./day-68.md) — side path; jail locked; evolve by score | [proto_lab.py](./practice/proto_lab.py) |
+| 69 | Communities | Done | [day-69.md](./day-69.md) — untrusted chat; share gaps; no secrets/dumps | [community_lab.py](./practice/community_lab.py) |
+| 70 | Phase review | Done | [day-70.md](./day-70.md) — wire 66–69 + gaps | [review70.py](./practice/review70.py) |
 
 ## Phase progress
 
@@ -87,9 +97,11 @@
 | Advanced Reasoning & Capstone | 46–50 | Reasoning, learning, explainability, future, capstone | **Complete** |
 | Enterprise Integration | 51–55 | APIs/microservices, authn/z, privacy, governance | **Complete** |
 | Advanced Topics (I) | 56–60 | Collaboration, efficiency, reliability, eval | **Complete** |
-| Real-World Applications | 61–65 | E-commerce, healthcare, finance, education | Not started |
+| Real-World Applications | 61–65 | E-commerce, healthcare, finance, education | **Complete** |
+| Research & Innovation | 66–70 | Frameworks, papers, experiments, community | **Complete** |
+| Advanced Patterns | 71–75 | Self-improve, adversarial, meta, hybrid HITL | **In progress** (0/5) |
 
-## Skills gained (Days 1–60)
+## Skills gained (Days 1–70)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -145,7 +157,17 @@
 - Reliability: retry transient only; breaker after N fails; degrade to local; do not retry injection
 - Evaluation: custom golden suite first; A/B on cost/latency/accuracy/safety; re-run = continuous; HELM later
 - Phase 56–60: wire collab + cheap path + breaker + golden card; say the gaps (no HELM, not one API process)
+- E-commerce: sentence → catalog; personalize from profile; pay is HITL; no fake stock; no other user's order
+- Healthcare: schedule/remind/FAQ ok; no diagnosis; urgent → HITL; disclaimer ≠ permit; no raw chart in logs
+- Finance: ledger truth; no investment advice; big transfer HITL; audit without PAN
+- Education: hint before dump; adaptive next step; COPPA no extra child PII; FERPA grades to teacher not chat
+- Phase 61–65: wire shop/clinic/bank/tutor; inject still blocked; say the gaps (not licensed, not real law, not one Yoyo)
+- OSS frameworks: pick by job; LangChain for Yoyo; AutoGPT loop not HITL-safe; issue then small patch; no custom Yoyo framework
+- Papers: abstract → method → limits → one slice; adapt not dump; SOTA ≠ must ship; tweets still hit guardrails
+- Experiments: prototype off `yoyo.py`; jail/HITL not self-written; pick by eval+safety; ship only if beat baseline
+- Community: Discord untrusted; `.env`/user dump never public; HITL gaps *are* public
+- Phase 66–70: wire oss/paper/proto/community; no live proto, no real PR, AutoGPT ≠ Yoyo
 
 ## Next
 
-- **Day 61:** E-commerce agents
+- **Day 71:** Self-improving agents
