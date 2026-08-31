@@ -1,64 +1,54 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"math"
 )
 
-type Shape interface {
-	Area() float64
-	Perimeter() float64
-}
-type Circle struct {
-	R float64
+var ErrEmpty = errors.New("empty name")
+
+type BadAgeError struct {
+	Age int
 }
 
-func (c Circle) Area() float64 {
-	return math.Pi * c.R * c.R
-}
-func (c Circle) Perimeter() float64 {
-	return 2 * math.Pi * c.R
+func (e BadAgeError) Error() string {
+	return fmt.Sprintf("bad age %d", e.Age)
 }
 
-type Rectangle struct {
-	W, H float64
+func parseUser(name string, age int) (string, error) {
+	if name == "" {
+		return "", ErrEmpty
+	}
+	if age < 0 {
+		return "", BadAgeError{Age: age}
+	}
+	return name, nil
 }
 
-func (r Rectangle) Area() float64 {
-	return r.W * r.H
+func load(name string, age int) (string, error) {
+	u, err := parseUser(name, age)
+	if err != nil {
+		return "", fmt.Errorf("load: %w", err)
+	}
+	return u, nil
 }
-func (r Rectangle) Perimeter() float64 {
-	return 2 * (r.W + r.H)
-}
-func printShape(name string, s Shape) {
-	fmt.Println(name, "area", s.Area(), "peri", s.Perimeter())
-}
-
-type Logger interface {
-	Log(msg string)
-}
-type ConsoleLogger struct{}
-
-func (ConsoleLogger) Log(msg string) {
-	fmt.Println("log:", msg)
-}
-
-type NoopLogger struct{}
-
-func (NoopLogger) Log(string) {}
 
 func main() {
-	c := Circle{R: 1}
-	rect := Rectangle{W: 2, H: 3}
-	printShape("circle", c)
-	printShape("rect", rect)
+	if _, err := load("", 1); err != nil {
+		fmt.Println("empty:", err)
+		fmt.Println("is ErrEmpty:", errors.Is(err, ErrEmpty))
+	}
 
-	wantArea := 6.0
-	gotArea := rect.Area()
-	fmt.Println("rect area table", "want", wantArea, "got", gotArea, "ok", gotArea == wantArea)
+	if _, err := load("ada", -3); err != nil {
+		fmt.Println("age:", err)
+		var bad BadAgeError
+		fmt.Println("as BadAge:", errors.As(err, &bad), bad.Age)
+	}
 
-	var logs Logger = ConsoleLogger{}
-	logs.Log("shapes done")
-	logs = NoopLogger{}
-	logs.Log("you should not see this")
+	u, err := load("ada", 19)
+	if err != nil {
+		fmt.Println("unexpected", err)
+		return
+	}
+	fmt.Println("ok", u)
 }
