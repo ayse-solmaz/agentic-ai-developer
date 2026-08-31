@@ -1,43 +1,53 @@
 package main
 
-import "fmt"
-
-func worker(id int, jobs <-chan int, results chan<- int) {
-	for n := range jobs {
-		results <- n * n
-	}
-}
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	ping := make(chan string)
-	go func() {
-		ping <- "hello"
-	}()
-	fmt.Println("unbuffered:", <-ping)
-
-	buf := make(chan int, 2)
-	buf <- 1
-	buf <- 2
-	fmt.Println("buffered:", <-buf, <-buf)
-
-	ch := make(chan int)
-	go func() {
-		ch <- 10
-		ch <- 20
-		close(ch)
-	}()
-	fmt.Print("range:")
-	for v := range ch {
-		fmt.Print(" ", v)
+	fast := make(chan string, 1)
+	fast <- "ready"
+	slow := make(chan string)
+	select {
+	case m := <-fast:
+		fmt.Println("select:", m)
+	case <-slow:
+		fmt.Println("select: slow")
 	}
-	fmt.Println()
 
-	jobs := make(chan int, 3)
-	results := make(chan int, 3)
-	go worker(1, jobs, results)
-	jobs <- 2
-	jobs <- 3
-	jobs <- 4
-	close(jobs)
-	fmt.Println("squares:", <-results, <-results, <-results)
+	blocked := make(chan int)
+	select {
+	case <-blocked:
+		fmt.Println("got")
+	case <-time.After(50 * time.Millisecond):
+		fmt.Println("timeout")
+	}
+
+	done := make(chan struct{})
+	go func() {
+		for {
+			select {
+			case <-done:
+				fmt.Println("cancelled")
+				return
+			default:
+				time.Sleep(10 * time.Millisecond)
+			}
+		}
+	}()
+	time.Sleep(30 * time.Millisecond)
+	close(done)
+	time.Sleep(20 * time.Millisecond)
+
+	out := make(chan int, 1)
+	dropped := 0
+	for i := 0; i < 3; i++ {
+		select {
+		case out <- i:
+		default:
+			dropped++
+		}
+	}
+	fmt.Println("dropped", dropped)
 }
