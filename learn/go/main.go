@@ -1,94 +1,33 @@
 package main
 
 import (
-	"encoding/json"
-	"errors"
 	"fmt"
-	"os"
-	"strings"
+	"sync"
+	"time"
 )
 
-type Config struct {
-	Name string `json:"name"`
-}
-
-func loadConfig(path string) (Config, error) {
-	raw, err := os.ReadFile(path)
-	if err != nil {
-		return Config{}, fmt.Errorf("config: %w", err)
-	}
-	var c Config
-	if err := json.Unmarshal(raw, &c); err != nil {
-		return Config{}, fmt.Errorf("config json: %w", err)
-	}
-	if strings.TrimSpace(c.Name) == "" {
-		return Config{}, errors.New("config: name required")
-	}
-	return c, nil
-}
-
-func countWords(path string) (map[string]int, error) {
-	raw, err := os.ReadFile(path)
-	if err != nil {
-		return nil, fmt.Errorf("data: %w", err)
-	}
-	freq := map[string]int{}
-	for _, w := range strings.Fields(string(raw)) {
-		freq[w]++
-	}
-	return freq, nil
-}
-
-type Summary struct {
-	Name  string         `json:"name"`
-	Words map[string]int `json:"words"`
-}
-
 func main() {
-	if err := os.WriteFile("day15-config.json", []byte(`{"name":"lab"}`), 0644); err != nil {
-		fmt.Println(err)
-		return
+	var wg sync.WaitGroup
+	for i := 1; i <= 3; i++ {
+		wg.Add(1)
+		go func(n int) {
+			defer wg.Done()
+			time.Sleep(time.Millisecond * time.Duration(4-n))
+			fmt.Println("worker", n)
+		}(i)
 	}
-	if err := os.WriteFile("day15-data.txt", []byte("go go json go"), 0644); err != nil {
-		fmt.Println(err)
-		return
-	}
+	wg.Wait()
+	fmt.Println("all done")
 
-	cfg, err := loadConfig("day15-config.json")
-	if err != nil {
-		fmt.Println("load:", err)
-		return
+	var n int
+	var wg2 sync.WaitGroup
+	for i := 0; i < 1000; i++ {
+		wg2.Add(1)
+		go func() {
+			defer wg2.Done()
+			n++
+		}()
 	}
-	freq, err := countWords("day15-data.txt")
-	if err != nil {
-		fmt.Println("count:", err)
-		return
-	}
-	out, err := json.Marshal(Summary{Name: cfg.Name, Words: freq})
-	if err != nil {
-		fmt.Println("summary:", err)
-		return
-	}
-	if err := os.WriteFile("day15-summary.json", out, 0644); err != nil {
-		fmt.Println("write summary:", err)
-		return
-	}
-	fmt.Println("summary:", string(out))
-
-	_, err = loadConfig("no-such-config.json")
-	fmt.Println("missing:", err != nil, errors.Is(err, os.ErrNotExist))
-
-	if err := os.WriteFile("day15-bad.json", []byte(`{not json`), 0644); err != nil {
-		fmt.Println(err)
-		return
-	}
-	_, err = loadConfig("day15-bad.json")
-	fmt.Println("malformed:", err != nil)
-
-	if err := os.WriteFile("day15-empty.json", []byte(`{"name":""}`), 0644); err != nil {
-		fmt.Println(err)
-		return
-	}
-	_, err = loadConfig("day15-empty.json")
-	fmt.Println("empty name:", err != nil)
+	wg2.Wait()
+	fmt.Println("racy count", n)
 }
