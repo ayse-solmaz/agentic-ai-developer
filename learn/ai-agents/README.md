@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–63 Done** · Phase 61–65 in progress · Current: **Day 64**
+**Status:** Days **1–75 Done** · Phase 76–80 next · Current: **Day 76**
 
 ## Practice
 
@@ -81,6 +81,7 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | 68 | Experimental architectures | [practice/proto_lab.py](./practice/proto_lab.py), [day-68.md](./day-68.md) |
 | 69 | Communities | [practice/community_lab.py](./practice/community_lab.py), [day-69.md](./day-69.md) |
 | 70 | Phase review | [practice/review70.py](./practice/review70.py), [day-70.md](./day-70.md) |
+| 71 | Self-improving | [practice/improve_lab.py](./practice/improve_lab.py), [day-71.md](./day-71.md) |
 
 ## Phases
 
@@ -100,7 +101,8 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Advanced topics (I) | 56–60 | **Complete** |
 | Real-world applications | 61–65 | **Complete** |
 | Research & innovation | 66–70 | **Complete** |
-| Advanced patterns | 71–75 | In progress (Day 71) |
+| Advanced patterns | 71–75 | **Complete** |
+| Specialized agents (II) | 76–80 | In progress (Day 76) |
 
 ## Run practice
 

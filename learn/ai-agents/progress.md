@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-08-31  
-**Current:** Day 71 (self-improving) — next up
+**Last updated:** 2026-09-01  
+**Current:** Day 76 (legal/compliance) — next up
 
 ## Day-by-day log
 
@@ -80,6 +80,11 @@
 | 68 | Experimental architectures | Done | [day-68.md](./day-68.md) — side path; jail locked; evolve by score | [proto_lab.py](./practice/proto_lab.py) |
 | 69 | Communities | Done | [day-69.md](./day-69.md) — untrusted chat; share gaps; no secrets/dumps | [community_lab.py](./practice/community_lab.py) |
 | 70 | Phase review | Done | [day-70.md](./day-70.md) — wire 66–69 + gaps | [review70.py](./practice/review70.py) |
+| 71 | Self-improving | Done | [day-71.md](./day-71.md) — feedback loop; jail locked; poison not a lesson | [improve_lab.py](./practice/improve_lab.py) |
+| 72 | Adversarial | Done | [day-72.md](./day-72.md) — red team own door; naive misses; auction ≠ inject | [advers_lab.py](./practice/advers_lab.py) |
+| 73 | Meta-agents | Done | [day-73.md](./day-73.md) — select + budget degrade; inject not forwarded | [meta_lab.py](./practice/meta_lab.py) |
+| 74 | Hybrid HITL | Done | [day-74.md](./day-74.md) — list agent; delete handoff id+why; inject not a ticket | [hybrid_lab.py](./practice/hybrid_lab.py) |
+| 75 | Phase review | Done | [day-75.md](./day-75.md) — wire 71–74 + gaps | [review75.py](./practice/review75.py) |
 
 ## Phase progress
 
@@ -99,9 +104,10 @@
 | Advanced Topics (I) | 56–60 | Collaboration, efficiency, reliability, eval | **Complete** |
 | Real-World Applications | 61–65 | E-commerce, healthcare, finance, education | **Complete** |
 | Research & Innovation | 66–70 | Frameworks, papers, experiments, community | **Complete** |
-| Advanced Patterns | 71–75 | Self-improve, adversarial, meta, hybrid HITL | **In progress** (0/5) |
+| Advanced Patterns | 71–75 | Self-improve, adversarial, meta, hybrid HITL | **Complete** |
+| Specialized Agents (II) | 76–80 | Legal, creative, science, IoT/edge | **In progress** (0/5) |
 
-## Skills gained (Days 1–70)
+## Skills gained (Days 1–75)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -168,6 +174,12 @@
 - Community: Discord untrusted; `.env`/user dump never public; HITL gaps *are* public
 - Phase 66–70: wire oss/paper/proto/community; no live proto, no real PR, AutoGPT ≠ Yoyo
 
+- Self-improve: outcome/thumbs → store; jail/HITL frozen; injection is not a lesson; accept only if accuracy/cost/blocks hold
+- Adversarial: red-team own golden blocks; `check_input` not the model; competitive ≠ inject; poison still unlearned
+- Meta-agent: pick worker + spend budget; degrade when cap hits; never forward inject; cannot unlock jail
+- Hybrid: low-risk list is agent; delete HITL; handoff = user id + why; inject is not a human ticket
+- Phase 71–75: wire improve/red-team/meta/hybrid; jail locked; say the gaps (not one API, no new payloads, fake budget)
+
 ## Next
 
-- **Day 71:** Self-improving agents
+- **Day 76:** Legal and compliance agents
