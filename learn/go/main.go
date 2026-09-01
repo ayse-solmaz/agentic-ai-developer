@@ -3,49 +3,64 @@ package main
 import (
 	"fmt"
 	"sync"
-	"sync/atomic"
+	"time"
 )
 
+func fetch(url string) string {
+	time.Sleep(20 * time.Millisecond)
+	return "ok:" + url
+}
+
 func main() {
-	var mu sync.Mutex
-	var n int
+	urls := []string{"a.com", "b.com", "c.com"}
+	results := make(chan string, len(urls))
 	var wg sync.WaitGroup
-	for i := 0; i < 1000; i++ {
+	for _, u := range urls {
 		wg.Add(1)
-		go func() {
+		go func(u string) {
 			defer wg.Done()
-			mu.Lock()
-			n++
-			mu.Unlock()
-		}()
+			results <- fetch(u)
+		}(u)
 	}
-	wg.Wait()
-	fmt.Println("mutex count", n)
-
-	var once sync.Once
-	var wg2 sync.WaitGroup
-	for i := 0; i < 5; i++ {
-		wg2.Add(1)
-		go func() {
-			defer wg2.Done()
-			once.Do(func() {
-				fmt.Println("once init")
-			})
-		}()
+	go func() {
+		wg.Wait()
+		close(results)
+	}()
+	fmt.Print("downloads:")
+	for r := range results {
+		fmt.Print(" ", r)
 	}
-	wg2.Wait()
+	fmt.Println()
 
-	var a atomic.Int64
-	var wg3 sync.WaitGroup
-	for i := 0; i < 1000; i++ {
-		wg3.Add(1)
-		go func() {
-			defer wg3.Done()
-			a.Add(1)
-		}()
+	gen := make(chan int)
+	go func() {
+		for i := 1; i <= 3; i++ {
+			gen <- i
+		}
+		close(gen)
+	}()
+	sq := make(chan int)
+	go func() {
+		for n := range gen {
+			sq <- n * n
+		}
+		close(sq)
+	}()
+	fmt.Print("pipe:")
+	for n := range sq {
+		fmt.Print(" ", n)
 	}
-	wg3.Wait()
-	fmt.Println("atomic count", a.Load())
+	fmt.Println()
 
-	fmt.Println("choose: channel for flow; mutex for shared fields")
+	late := make(chan string, 1)
+	go func() {
+		time.Sleep(200 * time.Millisecond)
+		late <- "body"
+	}()
+	select {
+	case m := <-late:
+		fmt.Println("fetch:", m)
+	case <-time.After(50 * time.Millisecond):
+		fmt.Println("fetch timeout")
+	}
 }
