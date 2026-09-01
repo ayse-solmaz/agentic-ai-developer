@@ -2,52 +2,50 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"sync"
+	"sync/atomic"
 )
 
 func main() {
-	fast := make(chan string, 1)
-	fast <- "ready"
-	slow := make(chan string)
-	select {
-	case m := <-fast:
-		fmt.Println("select:", m)
-	case <-slow:
-		fmt.Println("select: slow")
+	var mu sync.Mutex
+	var n int
+	var wg sync.WaitGroup
+	for i := 0; i < 1000; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			mu.Lock()
+			n++
+			mu.Unlock()
+		}()
 	}
+	wg.Wait()
+	fmt.Println("mutex count", n)
 
-	blocked := make(chan int)
-	select {
-	case <-blocked:
-		fmt.Println("got")
-	case <-time.After(50 * time.Millisecond):
-		fmt.Println("timeout")
+	var once sync.Once
+	var wg2 sync.WaitGroup
+	for i := 0; i < 5; i++ {
+		wg2.Add(1)
+		go func() {
+			defer wg2.Done()
+			once.Do(func() {
+				fmt.Println("once init")
+			})
+		}()
 	}
+	wg2.Wait()
 
-	done := make(chan struct{})
-	go func() {
-		for {
-			select {
-			case <-done:
-				fmt.Println("cancelled")
-				return
-			default:
-				time.Sleep(10 * time.Millisecond)
-			}
-		}
-	}()
-	time.Sleep(30 * time.Millisecond)
-	close(done)
-	time.Sleep(20 * time.Millisecond)
-
-	out := make(chan int, 1)
-	dropped := 0
-	for i := 0; i < 3; i++ {
-		select {
-		case out <- i:
-		default:
-			dropped++
-		}
+	var a atomic.Int64
+	var wg3 sync.WaitGroup
+	for i := 0; i < 1000; i++ {
+		wg3.Add(1)
+		go func() {
+			defer wg3.Done()
+			a.Add(1)
+		}()
 	}
-	fmt.Println("dropped", dropped)
+	wg3.Wait()
+	fmt.Println("atomic count", a.Load())
+
+	fmt.Println("choose: channel for flow; mutex for shared fields")
 }
