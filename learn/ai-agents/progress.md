@@ -4,7 +4,7 @@
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
 **Last updated:** 2026-09-03  
-**Current:** Day 81 (advanced monitoring) — next up
+**Current:** Day 84 (security hardening) — next up
 
 ## Day-by-day log
 
@@ -90,6 +90,9 @@
 | 78 | Scientific research | Done | [day-78.md](./day-78.md) — corpus ids; same query; no fake paper | [science_lab.py](./practice/science_lab.py) |
 | 79 | IoT / edge | Done | [day-79.md](./day-79.md) — local fan; offline; allowlist HITL | [edge_lab.py](./practice/edge_lab.py) |
 | 80 | Phase review | Done | [day-80.md](./day-80.md) — wire 76–79 + gaps | [review80.py](./practice/review80.py) |
+| 81 | Advanced monitoring | Done | [day-81.md](./day-81.md) — board = ms+blocks+work; both spikes bad | [monitor_lab.py](./practice/monitor_lab.py) |
+| 82 | Error recovery | Done | [day-82.md](./day-82.md) — classify; inject 0 retry; tool → local | [recover_lab.py](./practice/recover_lab.py) |
+| 83 | Cost management | Done | [day-83.md](./day-83.md) — cap degrade; no inject cache; ROI = work/cent | [budget_lab.py](./practice/budget_lab.py) |
 
 ## Phase progress
 
@@ -111,9 +114,9 @@
 | Research & Innovation | 66–70 | Frameworks, papers, experiments, community | **Complete** |
 | Advanced Patterns | 71–75 | Self-improve, adversarial, meta, hybrid HITL | **Complete** |
 | Specialized Agents (II) | 76–80 | Legal, creative, science, IoT/edge | **Complete** |
-| Production Excellence | 81–85 | Monitor, recover, cost, harden | **In progress** (0/5) |
+| Production Excellence | 81–85 | Monitor, recover, cost, harden | **In progress** (3/5) |
 
-## Skills gained (Days 1–80)
+## Skills gained (Days 1–83)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -190,7 +193,10 @@
 - Science: corpus ids; reproducible list; ungrounded DOI; proven/submit HITL
 - Edge: local threshold; works offline; allowlist + HITL unlock; unknown actuator deny
 - Phase 76–80: wire legal/creative/science/edge; not a new IoT product; say the gaps
+- Monitor: latency ≠ enough; blocks collapse and 10× latency are bad; no TCKN on the board
+- Recover: classify; inject 0 retries; tool → list_local; no secrets in user errors
+- Cost: cap then degrade; no inject cache; ROI = work/cent not tokens burned
 
 ## Next
 
-- **Day 81:** Advanced monitoring and analytics
+- **Day 84:** Advanced security hardening
