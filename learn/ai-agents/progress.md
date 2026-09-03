@@ -3,8 +3,8 @@
 **Repo:** [agentic-ai-developer](https://github.com/ayse-solmaz/agentic-ai-developer)  
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
-**Last updated:** 2026-09-01  
-**Current:** Day 76 (legal/compliance) — next up
+**Last updated:** 2026-09-03  
+**Current:** Day 81 (advanced monitoring) — next up
 
 ## Day-by-day log
 
@@ -85,6 +85,11 @@
 | 73 | Meta-agents | Done | [day-73.md](./day-73.md) — select + budget degrade; inject not forwarded | [meta_lab.py](./practice/meta_lab.py) |
 | 74 | Hybrid HITL | Done | [day-74.md](./day-74.md) — list agent; delete handoff id+why; inject not a ticket | [hybrid_lab.py](./practice/hybrid_lab.py) |
 | 75 | Phase review | Done | [day-75.md](./day-75.md) — wire 71–74 + gaps | [review75.py](./practice/review75.py) |
+| 76 | Legal / compliance | Done | [day-76.md](./day-76.md) — KB cite; no advice; ungrounded case law | [legal_lab.py](./practice/legal_lab.py) |
+| 77 | Creative / design | Done | [day-77.md](./day-77.md) — brand card; no clone; publish HITL | [creative_lab.py](./practice/creative_lab.py) |
+| 78 | Scientific research | Done | [day-78.md](./day-78.md) — corpus ids; same query; no fake paper | [science_lab.py](./practice/science_lab.py) |
+| 79 | IoT / edge | Done | [day-79.md](./day-79.md) — local fan; offline; allowlist HITL | [edge_lab.py](./practice/edge_lab.py) |
+| 80 | Phase review | Done | [day-80.md](./day-80.md) — wire 76–79 + gaps | [review80.py](./practice/review80.py) |
 
 ## Phase progress
 
@@ -105,9 +110,10 @@
 | Real-World Applications | 61–65 | E-commerce, healthcare, finance, education | **Complete** |
 | Research & Innovation | 66–70 | Frameworks, papers, experiments, community | **Complete** |
 | Advanced Patterns | 71–75 | Self-improve, adversarial, meta, hybrid HITL | **Complete** |
-| Specialized Agents (II) | 76–80 | Legal, creative, science, IoT/edge | **In progress** (0/5) |
+| Specialized Agents (II) | 76–80 | Legal, creative, science, IoT/edge | **Complete** |
+| Production Excellence | 81–85 | Monitor, recover, cost, harden | **In progress** (0/5) |
 
-## Skills gained (Days 1–75)
+## Skills gained (Days 1–80)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -179,7 +185,12 @@
 - Meta-agent: pick worker + spend budget; degrade when cap hits; never forward inject; cannot unlock jail
 - Hybrid: low-risk list is agent; delete HITL; handoff = user id + why; inject is not a human ticket
 - Phase 71–75: wire improve/red-team/meta/hybrid; jail locked; say the gaps (not one API, no new payloads, fake budget)
+- Legal: KB cite only; sign/sue refuse+HITL; disclaimer ≠ invent; inject still block
+- Creative: brand card; same voice twice; no artist clone; publish HITL
+- Science: corpus ids; reproducible list; ungrounded DOI; proven/submit HITL
+- Edge: local threshold; works offline; allowlist + HITL unlock; unknown actuator deny
+- Phase 76–80: wire legal/creative/science/edge; not a new IoT product; say the gaps
 
 ## Next
 
-- **Day 76:** Legal and compliance agents
+- **Day 81:** Advanced monitoring and analytics

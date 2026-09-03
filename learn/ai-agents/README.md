@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–75 Done** · Phase 76–80 next · Current: **Day 76**
+**Status:** Days **1–80 Done** · Phase 81–85 next · Current: **Day 81**
 
 ## Practice
 
@@ -102,7 +102,8 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Real-world applications | 61–65 | **Complete** |
 | Research & innovation | 66–70 | **Complete** |
 | Advanced patterns | 71–75 | **Complete** |
-| Specialized agents (II) | 76–80 | In progress (Day 76) |
+| Specialized agents (II) | 76–80 | **Complete** |
+| Production excellence | 81–85 | In progress (Day 81) |
 
 ## Run practice
 
