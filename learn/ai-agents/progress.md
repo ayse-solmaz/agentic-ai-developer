@@ -4,7 +4,7 @@
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
 **Last updated:** 2026-09-03  
-**Current:** Day 84 (security hardening) — next up
+**Current:** Day 91 (portfolio) — next up
 
 ## Day-by-day log
 
@@ -93,6 +93,13 @@
 | 81 | Advanced monitoring | Done | [day-81.md](./day-81.md) — board = ms+blocks+work; both spikes bad | [monitor_lab.py](./practice/monitor_lab.py) |
 | 82 | Error recovery | Done | [day-82.md](./day-82.md) — classify; inject 0 retry; tool → local | [recover_lab.py](./practice/recover_lab.py) |
 | 83 | Cost management | Done | [day-83.md](./day-83.md) — cap degrade; no inject cache; ROI = work/cent | [budget_lab.py](./practice/budget_lab.py) |
+| 84 | Security hardening | Done | [day-84.md](./day-84.md) — layers; poison blocked; golden pentest | [harden_lab.py](./practice/harden_lab.py) |
+| 85 | Phase review | Done | [day-85.md](./day-85.md) — wire 81–84 + gaps | [review85.py](./practice/review85.py) |
+| 86 | Product | Done | [day-86.md](./day-86.md) — MVP includes jail; swarm is roadmap | [product_lab.py](./practice/product_lab.py) |
+| 87 | Business models | Done | [day-87.md](./day-87.md) — free jail on; price ≥ TCO; no no-HITL SKU | [biz_lab.py](./practice/biz_lab.py) |
+| 88 | ROI / value | Done | [day-88.md](./day-88.md) — TCO in ROI; risks on the case | [roi_lab.py](./practice/roi_lab.py) |
+| 89 | Project management | Done | [day-89.md](./day-89.md) — MVP sprint; golden DoD; no autonomy promise | [pm_lab.py](./practice/pm_lab.py) |
+| 90 | Phase review | Done | [day-90.md](./day-90.md) — wire 86–89 + gaps | [review90.py](./practice/review90.py) |
 
 ## Phase progress
 
@@ -114,9 +121,11 @@
 | Research & Innovation | 66–70 | Frameworks, papers, experiments, community | **Complete** |
 | Advanced Patterns | 71–75 | Self-improve, adversarial, meta, hybrid HITL | **Complete** |
 | Specialized Agents (II) | 76–80 | Legal, creative, science, IoT/edge | **Complete** |
-| Production Excellence | 81–85 | Monitor, recover, cost, harden | **In progress** (3/5) |
+| Production Excellence | 81–85 | Monitor, recover, cost, harden | **Complete** |
+| Business Applications | 86–90 | Product, models, ROI, PM | **Complete** |
+| Career Development | 91–95 | Portfolio, skills, network, interview | **In progress** (0/5) |
 
-## Skills gained (Days 1–83)
+## Skills gained (Days 1–90)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -196,7 +205,14 @@
 - Monitor: latency ≠ enough; blocks collapse and 10× latency are bad; no TCKN on the board
 - Recover: classify; inject 0 retries; tool → list_local; no secrets in user errors
 - Cost: cap then degrade; no inject cache; ROI = work/cent not tokens burned
+- Harden: naive prompt insufficient; poison not stored; pentest = golden ids
+- Phase 81–85: wire monitor/recover/budget/harden; not Grafana; say the gaps
+- Product: MVP = list/add/HITL + jail; swarm later; research notes have no secrets
+- Biz model: free still jails; price ≥ TCO; do not sell no-HITL autonomy
+- ROI: TCO in the denominator; blocks drop ≠ benefit; inject stays a listed risk
+- PM: this sprint = MVP not swarm; golden in DoD; no autonomy promise to stakeholders
+- Phase 86–90: wire product/biz/ROI/PM; not a deck; say the gaps
 
 ## Next
 
-- **Day 84:** Advanced security hardening
+- **Day 91:** Building your agent portfolio
