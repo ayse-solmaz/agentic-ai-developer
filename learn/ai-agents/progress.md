@@ -4,7 +4,7 @@
 **Track:** AI Agents (100 days)  
 **Project thread:** Yoyo — personal daily task agent  
 **Last updated:** 2026-09-03  
-**Current:** Day 91 (portfolio) — next up
+**Current:** Track complete (100/100)
 
 ## Day-by-day log
 
@@ -100,6 +100,16 @@
 | 88 | ROI / value | Done | [day-88.md](./day-88.md) — TCO in ROI; risks on the case | [roi_lab.py](./practice/roi_lab.py) |
 | 89 | Project management | Done | [day-89.md](./day-89.md) — MVP sprint; golden DoD; no autonomy promise | [pm_lab.py](./practice/pm_lab.py) |
 | 90 | Phase review | Done | [day-90.md](./day-90.md) — wire 86–89 + gaps | [review90.py](./practice/review90.py) |
+| 91 | Portfolio | Done | [day-91.md](./day-91.md) — few stories; no keys; jail is depth | [portfolio_lab.py](./practice/portfolio_lab.py) |
+| 92 | Skills and roles | Done | [day-92.md](./day-92.md) — agent ≠ prompt-only; jail = system design | [roles_lab.py](./practice/roles_lab.py) |
+| 93 | Networking | Done | [day-93.md](./day-93.md) — no secrets; repeatable limits; no key to mentor | [network_lab.py](./practice/network_lab.py) |
+| 94 | Interview prep | Done | [day-94.md](./day-94.md) — take-home keeps jail; no .env on slide | [interview_lab.py](./practice/interview_lab.py) |
+| 95 | Phase review | Done | [day-95.md](./day-95.md) — wire 91–94 + gaps in README | [review95.py](./practice/review95.py) |
+| 96 | Capstone part 1 | Done | [day-96.md](./day-96.md) — Yoyo door plan; jail first; one framework | [capstone96.py](./practice/capstone96.py) |
+| 97 | Capstone part 2 | Done | [day-97.md](./day-97.md) — wire; golden before swarm | [capstone97.py](./practice/capstone97.py) |
+| 98 | Capstone part 3 | Done | [day-98.md](./day-98.md) — complete without swarm; no keys in image | [capstone98.py](./practice/capstone98.py) |
+| 99 | Portfolio presentation | Done | [day-99.md](./day-99.md) — capstone story; demo block; no .env | [present_lab.py](./practice/present_lab.py) |
+| 100 | Journey completion | Done | [day-100.md](./day-100.md) — synthesize; jail stays; door+measure+HITL | [finale_lab.py](./practice/finale_lab.py) |
 
 ## Phase progress
 
@@ -123,9 +133,10 @@
 | Specialized Agents (II) | 76–80 | Legal, creative, science, IoT/edge | **Complete** |
 | Production Excellence | 81–85 | Monitor, recover, cost, harden | **Complete** |
 | Business Applications | 86–90 | Product, models, ROI, PM | **Complete** |
-| Career Development | 91–95 | Portfolio, skills, network, interview | **In progress** (0/5) |
+| Career Development | 91–95 | Portfolio, skills, network, interview | **Complete** |
+| Final Mastery | 96–100 | Capstone system, portfolio, journey review | **Complete** |
 
-## Skills gained (Days 1–90)
+## Skills gained (Days 1–100)
 
 - Agent fundamentals: LLM + tools + memory
 - LangChain tool-calling agents with Gemini
@@ -212,7 +223,17 @@
 - ROI: TCO in the denominator; blocks drop ≠ benefit; inject stays a listed risk
 - PM: this sprint = MVP not swarm; golden in DoD; no autonomy promise to stakeholders
 - Phase 86–90: wire product/biz/ROI/PM; not a deck; say the gaps
+- Portfolio: few deep stories; README run+gaps; no keys; jail/HITL is depth
+- Roles: agent engineer ≠ prompt-only; jail/HITL = system design; no unsafe autonomy goal
+- Network: Discord untrusted; post limits not `.env`; mentor never gets the key
+- Interview: take-home keeps jail; design names HITL+degrade; no keys on the slide
+- Phase 91–95: wire portfolio/roles/network/interview; HITL stays; gaps in README
+- Capstone-1: Yoyo door; implement jail+list first; one framework by job
+- Capstone-2: wire labs; golden before swarm; recover list_local
+- Capstone-3: DoD without swarm; jail on; secrets at runtime not in image
+- Present: capstone story; inject demo is block; no .env on stage
+- Journey: synthesize LLM+tools+memory + HITL + measure; jail not a graduation gift
 
 ## Next
 
-- **Day 91:** Building your agent portfolio
+- **Track complete.** Optional: one FastAPI process, real IdP — keep jail and HITL.

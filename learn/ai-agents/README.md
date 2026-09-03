@@ -8,7 +8,7 @@
 
 See **[progress.md](./progress.md)** for the day-by-day log.
 
-**Status:** Days **1–90 Done** · Phase 91–95 next · Current: **Day 91**
+**Status:** Days **1–100 Done** · Track complete
 
 ## Practice
 
@@ -105,7 +105,8 @@ See **[progress.md](./progress.md)** for the day-by-day log.
 | Specialized agents (II) | 76–80 | **Complete** |
 | Production excellence | 81–85 | **Complete** |
 | Business applications | 86–90 | **Complete** |
-| Career development | 91–95 | In progress (Day 91) |
+| Career development | 91–95 | **Complete** |
+| Final mastery | 96–100 | **Complete** |
 
 ## Run practice
 
